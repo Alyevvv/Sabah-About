@@ -258,3 +258,50 @@
 	color: #fff;
 
 }
+
+@media(max-width:1200px){
+	.big-card{
+		width: 400px;
+		height: 400px;	
+	}
+	.card-img-top{
+		width: 300px;
+		height: 230px;
+	}
+	.card-horizontal{
+		width: 450px;
+		height:200px;
+	}
+	.horizontal-img{
+		width: 200px;
+
+	}
+	.card-horizontal .card-body h4{
+		font-size: 20px;
+	}
+	.card-horizontal .card-body{
+
+		font-size: 14px;
+	}
+	.little2-card{
+		margin-top: -20px;
+	}
+}
+
+@media(max-width:768px){
+
+	.big-card{
+		width: 500px;
+		height: 500px;	
+	}
+	.card-img-top{
+		width: 400px;
+		height: 330px;
+	}
+	.contact-logo{
+		margin-left: 40px;
+	}
+	.infos{
+		margin-left: 40px;
+	}
+}
