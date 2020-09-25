@@ -1,0 +1,260 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+}
+.navbar{
+	background-color: #1A477D !important;
+	border-bottom:#8FB714 1px solid;
+}
+.nav-link{
+	color: white !important;
+	transition: color .5s ease
+}
+.nav-link:hover{
+	color:  #90B914 !important;
+}
+
+.dropdown-menu{
+	margin-top: 17px !important;
+	background-color: #90B914 ;
+}
+.dropdown-menu a{
+	color: #fff;
+}
+.dropdown-menu a:hover{
+	background-color: #305E75;
+	color: #fff;
+}
+
+		/*ABOUT SECTION*/
+
+#about{
+	margin-top: 100px;
+}
+.about-title{
+	text-align: center;
+	margin-bottom: 50px;
+	color: #66820D;
+	font-style: italic;
+}
+.card{
+	border-radius: 10px;
+}
+.card-horizontal {
+    display: flex;
+    flex: 1 1 auto;
+}
+.big-card{
+	width: 500px;
+	height: 500px;
+	margin-bottom: 40px;
+}
+.little1-card, .little2-card{
+	margin-bottom: 50px;
+}
+.card-body{
+	background-color: #1D2931;
+	color:#fff;
+	text-decoration: none;
+}
+.card-body a{
+	text-decoration: none;
+	color: #fff;
+	font-weight: 300;
+	transition: 0.5s ease;
+}
+.card-body a:hover{
+	color: #90B914;
+	transition: 0.5s ease;
+}
+.big-card .card-body {
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+.little1-card .card-body {
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+.little2-card .card-body{
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+		/*HEADER SECTION*/
+
+#headerSection{
+	width: 100%;
+	height: 100%;
+	background: url(../img/sabah.jpg) center center;
+	background-size: cover;
+	background-repeat: no-repeat;	
+	
+}
+#headerSection .overlay{
+	background-color: rgba(0,0,0,0.4);
+}
+#headerSection .row{
+	height: 100vh;
+}
+.col p{
+	font-size: 44px;
+	font-weight: 400;
+	color: #8FB714;
+	margin-bottom: 10px;
+	letter-spacing: 1px;
+}
+		/*PRODUCT SECTION*/
+#product{
+	padding: 120px 0;
+	background-color: #E2E5EB;
+}
+.product-top h3 ,.portfolio-top h3{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 40px;
+	font-weight: 700;
+	color: #1886C7;
+}
+.product-top p{
+	font-weight: 500;
+	font-size: 16px;
+	font-style: italic;
+	color: #777;
+	margin-bottom: 70px;
+}
+.item-circle{
+	border:3px solid #1886C7;
+	width: 100px;
+	height: 100px;
+	margin:0 auto;
+	border-radius: 50px;
+}
+.product-content i{
+	color: #1886C7;
+	line-height: 100px;
+}
+.product-content h4{
+	font-family:  'Montserrat', sans-serif;
+	font-size: 18px;
+	font-weight: 700;
+	color: #222;
+	margin-top: 24px;
+}
+.product-content p{
+	font-family: 'Roboto Slab', serif;
+	font-size: 14px;
+	color: #777;	
+}
+					/*TESTIMONIAL SECTION*/
+#testimonial{
+	height: 100%;
+	width: 100%;
+}
+.testimonial{
+	background-color: #363555;
+	text-align: center;
+	padding: 30px 30px 50px;
+	margin: -50px 15px 100px;
+	position: relative;
+	margin-top: 168px;
+}
+.testimonial .icon{
+	display: inline-block;
+	font-size: 80px;
+	color: #FFFFFF;
+	margin-bottom: 20px;
+	opacity: 0.6;
+}
+.testimonial .description{
+	font-size: 16px;
+	font-weight: 400;
+	color: #fff;
+	text-align: justify;
+	margin-bottom: 30px;
+	opacity: 0.9;
+}
+.testimonial .testimonial-content{
+	width: 100%;
+	position: absolute;
+	left: 0; 
+}
+.testimonial .pic{
+	display: inline-block;
+	border:6px solid #fff;
+	border-radius: 50%;
+	box-shadow: 0 0 2px #000;
+	overflow: hidden;
+	z-index: 1;
+	position: relative;
+}
+.testimonial .pic img{
+	width: 50%;
+	height: auto;
+	border-radius: 50%;
+}
+.testimonial .title{
+	font-size: 15px;
+	font-weight: bold;
+	color: #000;
+	text-transform: capitalize;
+	margin: 5 0 5px 0;
+}
+.testimonial .post{
+	display: block;
+	font-size: 14px;
+	color: #ffd9b8;
+}
+.test-pic img{
+	width: 100px !important;
+	height: 50px; 
+}
+
+#contact{
+	margin-top: 100px;
+	background-color: #E9EDF0;
+}
+.contact-logo{
+	margin-top: 40px;
+	font-weight: 300;
+}
+.logo-img{
+	margin-bottom: 30px;
+}
+.contact-button button{
+	margin-top: 15px;
+	padding: 10px 15px;
+	outline: none;
+	background-color: #8FB714;
+	color: #fff;
+	border-radius: 10px;
+	border: none;
+}
+.contact-button button:hover{
+	color: #1A477D;
+}
+
+.contact-title {
+	font-weight: 400;
+	margin: 40px;
+}
+.contact-title p {
+	font-size: 18px;
+	font-weight: bold;
+}
+.contact-title .contact-items{
+	text-decoration: none;
+}
+.infos{
+	background-color: #8FB714;
+	padding-top: 40px;
+}
+
+	/*FOOTER SECTION*/
+#footer{
+	background-color: #1A477D;
+}
+#footer p{
+	color: #fff;
+
+}
