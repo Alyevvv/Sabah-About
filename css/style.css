@@ -93,7 +93,7 @@
 	
 }
 #headerSection .overlay{
-	background-color: red;
+	background-color: rgba(0,0,0,0.4);
 }
 #headerSection .row{
 	height: 100vh;
