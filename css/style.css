@@ -246,7 +246,7 @@
 }
 .card{
 	width: 19rem;
-	border-radius: 10px;
+	border-radius: 10px; 
 }
 .card-title{
 	font-style: italic;
