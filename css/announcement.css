@@ -44,19 +44,25 @@
 
 
       /*HEADER SECTION*/
-
-#announcement-section {
-  margin-top: 70px;
-  background-color: #1A477D;
-  height: 200px;
-}
-#announcement-section h1{
-    display: inline-block;
-    margin-top: 67px;
-    margin-left: 43%;
-    color: #fff;
-    font-weight: 300;
-}
+      #site-title {
+        font-size: 30px;
+        margin-top: 70px;
+        min-width: 100%;
+        background-color: #3479cc;
+        height: 200px;
+        color: #ffffff;
+        font-size: 30px;
+        
+    }
+    
+    .site-tit h1 {
+        text-align: center;
+        line-height: 199px;
+        font-family: 'Roboto Slab', serif;
+        font-size: 60px;
+    }
+      /*ANNOUNCEMENT SECTION*/ 
+      
 .meta {
     font-family: Helvetica,Arial,open-sans;
     font-size: .8571rem;
@@ -64,8 +70,6 @@
     color: #0093e0!important;
 }
 
-
-        /*ANNOUNCEMENT SECTION*/
 .announcements{
     margin-top: 100px;
 }
@@ -272,10 +276,6 @@ a {
   .contact-logo{
     margin-left: 40px;
   }
-  #announcement-section h1{
-    margin-left: 36%;
-  }
-
   .announcements {
     width: 80%;
   }
