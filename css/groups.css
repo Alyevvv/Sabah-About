@@ -1,0 +1,299 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #1A477D !important;
+    border-bottom: #8FB714 1px solid;
+}
+
+.nav-link {
+    color: white !important;
+    transition: color .5s ease
+}
+
+.nav-link:hover {
+    color: #90B914 !important;
+}
+
+@media (min-width: 992px) {
+    .animate {
+        animation-duration: 0.3s;
+        -webkit-animation-duration: 0.3s;
+        animation-fill-mode: both;
+        -webkit-animation-fill-mode: both;
+    }
+}
+
+
+@media (min-width: 360px) {
+    .animate {
+        animation-duration: 0.3s;
+        -webkit-animation-duration: 0.3s;
+        animation-fill-mode: both;
+        -webkit-animation-fill-mode: both;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        -webkit-transform: transform;
+        -webkit-opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        -webkit-opacity: 1;
+    }
+
+    0% {
+        -webkit-transform: translateY(1rem);
+        -webkit-opacity: 0;
+    }
+}
+
+.slideIn {
+    -webkit-animation-name: slideIn;
+    animation-name: slideIn;
+}
+
+
+/* Dropdown menu */
+.dropdown-menu {
+    margin-top: 17px !important;
+    background-color: #90B914;
+}
+
+.dropdown-menu a {
+    color: #fff;
+}
+
+.dropdown-menu a:hover {
+    background-color: #305E75;
+    color: #fff;
+}
+
+
+/* Site titlwe section*/
+#site-title {
+    font-size: 30px;
+    margin-top: 70px;
+    min-width: 100%;
+    background-color: #3479cc;
+    height: 200px;
+    color: #ffffff;
+    font-size: 30px;
+    
+}
+
+.site-tit h1 {
+    text-align: center;
+    line-height: 199px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 60px;
+}
+
+.specialties-title h1{
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    font-size: 60px;
+    margin-bottom: 46px;
+    color: black;
+}
+
+/*Content*/
+
+#groups {
+    margin-top: 63px;
+    margin-bottom: 77px;
+}
+
+.card-header{
+    border: none;
+    background-color: #1A477D;
+}
+
+
+
+
+.btn {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+}
+
+
+
+.btn-link:hover {
+    text-decoration: none;
+    color: white;
+}
+
+
+.btn.focus, .btn:focus {
+    outline: 0;
+    box-shadow: none;
+    background-color: #1A477D;
+}
+
+.btn.focus, .btn:focus h6{
+    color: white
+}
+
+.card-body li{
+    border-bottom: 1px solid steelblue;
+    padding: 10px 0;
+}
+
+.btn-link.focus,
+.btn-link:focus {
+    text-decoration: none;
+}
+
+
+.card-body {
+    text-align: center;
+    padding: 0;
+}
+
+.card-body a {
+    color: black;
+}
+
+.card-body a:hover {
+    text-decoration: none;
+    color: #007bff;
+}
+
+
+
+
+
+/* Subjects section */
+
+.content-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 01em;
+    min-width: 800px;
+    min-height: 500px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.content-table thead tr {
+    background-color: #1A477D;
+    color: #FFFFFF;
+    text-align: left;
+    font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+    padding: 12px 12px;
+}
+
+.content-table tbody tr {
+    border-bottom: 1px #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+    background-color: #c8f3f3;
+    color: #16257c;
+    font-weight: bold;
+}
+
+.content-table tbody tr:nth-of-type(odd) {
+    background-color: #e5fcfc;
+    color: #4d9b4d;
+    font-weight: bold;
+}
+
+.content-table tbody tr:last-of-type {
+    border-bottom: 2px #4d9b4d;
+}
+
+.content-table {
+
+    margin-left: auto;
+    margin-top: 100px;
+    margin-right: auto;
+    margin-bottom: 100px;
+}
+
+
+
+.scrollit {
+    background: url(../img/sabah.jpg) center center;
+    overflow: scroll;
+    color: rgba(0, 0, 0, 0);
+    height: 751px;
+    object-fit: cover;
+}
+
+
+
+
+
+/*Contact section*/
+#contact {
+    background-color: #E9EDF0;
+}
+
+.contact-logo {
+    margin-top: 40px;
+    font-weight: 300;
+}
+
+.logo-img {
+    margin-bottom: 30px;
+}
+
+.contact-button button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    outline: none;
+    background-color: #8FB714;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+}
+
+.contact-button button:hover {
+    color: #1A477D;
+}
+
+.contact-title {
+    font-weight: 400;
+    margin: 40px;
+}
+
+.contact-title p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.contact-title .contact-items {
+    text-decoration: none;
+}
+
+.infos {
+    background-color: #8FB714;
+    padding-top: 40px;
+}
+
+/*FOOTER SECTION*/
+#footer {
+    background-color: #1A477D;
+}
+
+#footer p {
+    color: #fff;
+
+}
