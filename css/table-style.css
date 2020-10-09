@@ -29,12 +29,25 @@
 	color: #fff;
 }
 
+<<<<<<< HEAD:css/table-style.css
+.card{
+	border-radius: 10px;
+}
+.card-horizontal {
+    display: flex;
+    flex: 1 1 auto;
+}
+.big-card{
+	width: 500px;
+	height: 500px;
+=======
 		/*ABOUT SECTION*/
 
 #about{
 	margin-top: 100px;
 }
 .image, .about-text{
+>>>>>>> 397035ef6f5695fde086ef87c0d73030289925d0:css/style.css
 	margin-bottom: 40px;
 }
 .image{
@@ -80,6 +93,8 @@
  	letter-spacing: 1px;
  }
 
+<<<<<<< HEAD:css/table-style.css
+=======
 	/*HEADER SECTION*/
 
 #headerSection{
@@ -96,6 +111,7 @@
 #headerSection .row{
 	height: 100vh;
 }
+>>>>>>> 397035ef6f5695fde086ef87c0d73030289925d0:css/style.css
 .col p{
 	font-size: 44px;
 	font-weight: 400;
@@ -103,7 +119,7 @@
 	margin-bottom: 10px;
 	letter-spacing: 1px;
 }
-		/*PRODUCT SECTION*/
+
 #product{
 	padding: 120px 0;
 	background-color: #E2E5EB;
@@ -144,6 +160,9 @@
 	font-size: 14px;
 	color: #777;	
 }
+<<<<<<< HEAD:css/table-style.css
+
+=======
 					/*TESTIMONIAL SECTION*/
 #testimonial{
 	height: 100%;
@@ -186,6 +205,7 @@
 	font-size: 14px;
 	color: #ffd9b8;
 }
+>>>>>>> 397035ef6f5695fde086ef87c0d73030289925d0:css/style.css
 .test-pic img{
 	width: 100px !important;
 	height: 50px; 
@@ -240,6 +260,85 @@
 
 }
 
+<<<<<<< HEAD:css/table-style.css
+.content-table {
+	border-collapse: collapse;
+	margin:25px 0;
+	font-size: 01em;
+	min-width: 800px;
+	min-height: 500px;
+	border-radius: 5px 5px 0 0;
+	overflow: hidden;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.content-table thead tr {
+	background-color: #1A477D;
+	color: #FFFFFF;
+	text-align: left;
+	font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+	padding: 12px 12px;
+}
+
+.content-table tbody tr {
+	border-bottom: 1px  #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+	background-color: #c8f3f3;
+	color: #16257c;
+	font-weight: bold;
+}
+
+.content-table tbody tr:nth-of-type(odd) {
+	background-color: #e5fcfc;
+	color: #4d9b4d;
+	font-weight: bold;
+}
+
+.content-table tbody tr:last-of-type {
+	border-bottom:2px #4d9b4d;
+}
+
+.content-table {
+
+	margin-left: auto;
+	margin-top: 100px;
+	margin-right: auto;
+	margin-bottom: 100px;
+
+}
+
+body{
+
+	background: url(../img/sabah.jpg) center center;
+	background-size: cover;
+	background-repeat: no-repeat;	
+	background-attachment: local;
+	height: 1000px;
+	table-layout: fixed;
+
+}
+
+.scrollit {
+	overflow:scroll;
+	height:700px;
+	color: rgba(0, 0, 0, 0);
+}
+
+@media(max-width:768px){
+
+	.contact-logo{
+		margin-left: 40px;
+	}
+
+	.infos{
+		margin-left: 40px;
+=======
 		/*NEWS SECTION*/
 #news{
 	margin-top:100px;
@@ -410,5 +509,6 @@
 		margin-left: 11px;
 		width: 16rem;
 		margin-bottom: 10px;
+>>>>>>> 397035ef6f5695fde086ef87c0d73030289925d0:css/style.css
 	}
 }
