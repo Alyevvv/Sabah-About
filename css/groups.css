@@ -29,6 +29,7 @@
     }
 }
 
+
 @media (min-width: 360px) {
     .animate {
         animation-duration: 0.3s;
@@ -37,7 +38,6 @@
         -webkit-animation-fill-mode: both;
     }
 }
-
 
 @keyframes slideIn {
     0% {
@@ -79,7 +79,7 @@
 
 
 /* Site titlwe section*/
-#site-title{
+#site-title {
     font-size: 30px;
     margin-top: 70px;
     min-width: 100%;
@@ -87,37 +87,155 @@
     height: 200px;
     color: #ffffff;
     font-size: 30px;
-    margin-bottom: -88px;
-} 
+    
+}
 
-.site-tit h1{
+.site-tit h1 {
     text-align: center;
     line-height: 199px;
     font-family: 'Roboto Slab', serif;
     font-size: 60px;
 }
 
+.specialties-title h1{
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    font-size: 60px;
+    margin-bottom: 46px;
+    color: black;
+}
 
+/*Content*/
 
+#groups {
+    margin-top: 63px;
+    margin-bottom: 77px;
+}
 
-
-
-
-/* Content section*/
-
-#about {
-    margin-top: 190px;
+.card-header{
+    border: none;
+    background-color: #1A477D;
 }
 
 
-.card{
- box-shadow: 0 0 35px 0 rgba(154, 161, 171, 0.15);
- border: none;
- margin-top: 30px;
+
+
+.btn {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
 }
 
-    
 
+
+.btn-link:hover {
+    text-decoration: none;
+    color: white;
+}
+
+
+.btn.focus, .btn:focus {
+    outline: 0;
+    box-shadow: none;
+    background-color: #1A477D;
+}
+
+.btn.focus, .btn:focus h6{
+    color: white
+}
+
+.card-body li{
+    border-bottom: 1px solid steelblue;
+    padding: 10px 0;
+}
+
+.btn-link.focus,
+.btn-link:focus {
+    text-decoration: none;
+}
+
+
+.card-body {
+    text-align: center;
+    padding: 0;
+}
+
+.card-body a {
+    color: black;
+}
+
+.card-body a:hover {
+    text-decoration: none;
+    color: #007bff;
+}
+
+
+
+
+
+/* Subjects section */
+
+.content-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 01em;
+    min-width: 800px;
+    min-height: 500px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.content-table thead tr {
+    background-color: #1A477D;
+    color: #FFFFFF;
+    text-align: left;
+    font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+    padding: 12px 12px;
+}
+
+.content-table tbody tr {
+    border-bottom: 1px #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+    background-color: #c8f3f3;
+    color: #16257c;
+    font-weight: bold;
+}
+
+.content-table tbody tr:nth-of-type(odd) {
+    background-color: #e5fcfc;
+    color: #4d9b4d;
+    font-weight: bold;
+}
+
+.content-table tbody tr:last-of-type {
+    border-bottom: 2px #4d9b4d;
+}
+
+.content-table {
+
+    margin-left: auto;
+    margin-top: 100px;
+    margin-right: auto;
+    margin-bottom: 100px;
+}
+
+
+
+.scrollit {
+    background: url(../img/sabah.jpg) center center;
+    overflow: scroll;
+    color: rgba(0, 0, 0, 0);
+    height: 751px;
+    object-fit: cover;
+}
 
 
 
@@ -125,7 +243,6 @@
 
 /*Contact section*/
 #contact {
-    margin-top: 100px;
     background-color: #E9EDF0;
 }
 
@@ -180,43 +297,3 @@
     color: #fff;
 
 }
-
-@media(max-width:985px) {
-
-    .card-img{
-        margin-top: 57px;
-
-    }    
-}
-
-
-
-
-
-
-@media(max-width: 768px){
-
-    .card-img{
-        margin-top: 50px;
-    }
- 
-}
-
-
-
-
-
-
-@media(max-width: 415px) {
-
-    .card:nth-child(2n) .row{
-        display: flex;
-        flex-direction: column-reverse;
-    }
-   
-    #about{
-        margin-top: 100px;
-    }
-
-}
-
