@@ -3,7 +3,6 @@
 	padding: 0;
 	box-sizing: border-box;
 	list-style: none;
-
 }
 .navbar{
 	background-color: #1A477D !important;
@@ -29,7 +28,6 @@
 	color: #fff;
 }
 
-<<<<<<< HEAD:css/table-style.css
 .card{
 	border-radius: 10px;
 }
@@ -40,78 +38,39 @@
 .big-card{
 	width: 500px;
 	height: 500px;
-=======
-		/*ABOUT SECTION*/
-
-#about{
-	margin-top: 100px;
-}
-.image, .about-text{
->>>>>>> 397035ef6f5695fde086ef87c0d73030289925d0:css/style.css
 	margin-bottom: 40px;
 }
-.image{
- 	width:100%;
-  	display: block;
- 	height: auto;
- }
- .overlay2{
- 	position: absolute;
-    top: 0;
-    left: 3%;
-    right: 0;
-    height: 90%;
-    width: 94%;
-    opacity: 0;
-    background-color: #57874A;
-    cursor: pointer;
-    transition: all 0.7s;
- }
- .overlay-container:hover .overlay2{
- 	opacity:.7;
- }
- .text{
- 	position: absolute;
- 	left: 50%;
- 	top: 50%;
- 	transform: translate(-50%,-50%);
- 	text-align: center;
- 	width: 100%;
- 	height: auto;
- 	color: #fff;
- }
- .overlay-border{
- 	width: 45%;
- 	border: 1px solid #fff;
- 	margin: 0 auto;
- 	margin-bottom: 15px;
- 	opacity: .7;
- }
- .project-title{
- 	font-size: 20px;
- 	font-weight: 300;
- 	letter-spacing: 1px;
- }
+.little1-card, .little2-card{
+	margin-bottom: 50px;
+}
+.card-body{
+	background-color: #1D2931;
+	color:#fff;
+	text-decoration: none;
+}
+.card-body a{
+	text-decoration: none;
+	color: #fff;
+	font-weight: 300;
+	transition: 0.5s ease;
+}
+.card-body a:hover{
+	color: #90B914;
+	transition: 0.5s ease;
+}
+.big-card .card-body {
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+.little1-card .card-body {
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+.little2-card .card-body{
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
 
-<<<<<<< HEAD:css/table-style.css
-=======
-	/*HEADER SECTION*/
-
-#headerSection{
-	width: 100%;
-	height: 100%;
-	background: url(../img/sabah.jpg) center center;
-	background-size: cover;
-	background-repeat: no-repeat;	
-	
-}
-#headerSection .overlay{
-	background-color: rgba(0,0,0,0.4);
-}
-#headerSection .row{
-	height: 100vh;
-}
->>>>>>> 397035ef6f5695fde086ef87c0d73030289925d0:css/style.css
 .col p{
 	font-size: 44px;
 	font-weight: 400;
@@ -119,7 +78,7 @@
 	margin-bottom: 10px;
 	letter-spacing: 1px;
 }
-
+		/*PRODUCT SECTION*/
 #product{
 	padding: 120px 0;
 	background-color: #E2E5EB;
@@ -160,16 +119,13 @@
 	font-size: 14px;
 	color: #777;	
 }
-<<<<<<< HEAD:css/table-style.css
-
-=======
 					/*TESTIMONIAL SECTION*/
 #testimonial{
 	height: 100%;
 	width: 100%;
 }
 .testimonial{
-	background-color: #363555;
+	background-color: #1A477D;
 	text-align: center;
 	padding: 30px 30px 50px;
 	margin: -50px 15px 100px;
@@ -179,7 +135,7 @@
 .testimonial .icon{
 	display: inline-block;
 	font-size: 80px;
-	color: #FFFFFF;
+	color: #ffffff;
 	margin-bottom: 20px;
 	opacity: 0.6;
 }
@@ -191,8 +147,25 @@
 	margin-bottom: 30px;
 	opacity: 0.9;
 }
-
-
+.testimonial .testimonial-content{
+	width: 100%;
+	position: absolute;
+	left: 0; 
+}
+.testimonial .pic{
+	display: inline-block;
+	border:6px solid #fff;
+	border-radius: 50%;
+	box-shadow: 0 0 2px #000;
+	overflow: hidden;
+	z-index: 1;
+	position: relative;
+}
+.testimonial .pic img{
+	width: 50%;
+	height: auto;
+	border-radius: 50%;
+}
 .testimonial .title{
 	font-size: 15px;
 	font-weight: bold;
@@ -205,7 +178,6 @@
 	font-size: 14px;
 	color: #ffd9b8;
 }
->>>>>>> 397035ef6f5695fde086ef87c0d73030289925d0:css/style.css
 .test-pic img{
 	width: 100px !important;
 	height: 50px; 
@@ -260,7 +232,6 @@
 
 }
 
-<<<<<<< HEAD:css/table-style.css
 .content-table {
 	border-collapse: collapse;
 	margin:25px 0;
@@ -328,187 +299,4 @@ body{
 	overflow:scroll;
 	height:700px;
 	color: rgba(0, 0, 0, 0);
-}
-
-@media(max-width:768px){
-
-	.contact-logo{
-		margin-left: 40px;
-	}
-
-	.infos{
-		margin-left: 40px;
-=======
-		/*NEWS SECTION*/
-#news{
-	margin-top:100px;
-}
-.card{
-	width: 19rem;
-	border-radius: 10px; 
-}
-.card-title{
-	font-style: italic;
-	font-size: 22px;
-	color: #90B914;
-}
-.news-link{
-	color: #0572B8;
-	margin-left: 90px;
-}
-.news-link:hover{
-	text-decoration: none;
-	color: #57874A;
-}
-
-
-#site-title {
-    font-size: 30px;
-    margin-top: 70px;
-    min-width: 100%;
-    background-color: #3479cc;
-    height: 200px;
-    color: #ffffff;
-    font-size: 30px;
-    
-}
-
-.site-tit h1 {
-    text-align: center;
-    line-height: 199px;
-    font-family: 'Roboto Slab', serif;
-    font-size: 60px;
-}
-
-
-
-@media(max-width:990px){
-	.overlay2{
-		position: absolute;
-	    top: 0;
-	    left: 2%;
-	    right: 0;
-	    height: 92%;
-	    width: 96%;
-	    opacity: 0;
-	    background-color: #57874A;
-	    cursor: pointer;
-	    transition: all 0.7s;
-	}
-	.pic-text{
-		display: flex;
-		/* flex-direction: column-reverse; */
-	}
-}
-@media(max-width:768px){
-	.card{
-		margin:0 auto;
-		margin-bottom: 20px;
-	}
-	.contact-logo{
-		margin-left: 40px;
-	  }
-	.overlay2{
-		position: absolute;
-	    top: 0;
-	    left: 2%;
-	    right: 0;
-	    height: 92%;
-	    width: 96%;
-	    opacity: 0;
-	    background-color: #57874A;
-	    cursor: pointer;
-	    transition: all 0.7s;
-		}
-	.pic-text{
-		display: flex;
-		flex-direction: column-reverse;
-	}
-}
-@media(max-width:640px){
-	.pic-text{
-		display: flex;
-		flex-direction: column-reverse;
-	}
-	.overlay2{
-		position: absolute;
-	    top: 0;
-	    left: 4%;
-	    right: 0;
-	    height: 87%;
-	    width: 93%;
-	    opacity: 0;
-	    background-color: #57874A;
-	    cursor: pointer;
-	    transition: all 0.7s;
-	}
-}
-@media(max-width:540px){
-	#news-section h1{
-		margin-left: 34%;
-	  }
-	
-}
-@media(max-width:375px){
-	.card{
-		width: 18rem;
-	}
-}
-@media(max-width:360px){
-	.card{
-		margin: 0 auto;
-		margin-bottom: 20px;
-		
-	}
-	.overlay2{
-		left: 4%;
-		right: 0;
-		height: 85%;
-		width: 92%;
-	 
-	}
-	.pic-text{
-		display: flex;
-		flex-direction: column-reverse;
-	}
-}
-@media(max-width:320px){
-	.card{
-		width: 18rem;
-		margin-bottom: 10px;
-	}
-	.overlay2{
-		position: absolute;
-	    top: 0;
-		left: 4%;
-		right: 0;
-		height: 84%;
-		width: 92%;
-		opacity: 0;
-	    background-color: #57874A;
-	    cursor: pointer;
-	    transition: all 0.7s;
-	 
-	}
-	.pic-text{
-		display: flex;
-		flex-direction: column-reverse;
-	}
-	.card{
-		margin-left: 0;
-		margin-right: 12px;
-	}
-	
-}
-@media(max-width:280px){
-	.cards{
-		padding-left: 0;
-		padding-right: 0;
-	}
-	.card{
-		margin-left: 11px;
-		width: 16rem;
-		margin-bottom: 10px;
->>>>>>> 397035ef6f5695fde086ef87c0d73030289925d0:css/style.css
-	}
 }
