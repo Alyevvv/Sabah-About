@@ -9,6 +9,10 @@ $(document).ready(function(){
         pagination:true,
         autoPlay:true
     });
+<<<<<<< HEAD
 });
 
  
+=======
+});
+>>>>>>> 5e46cac4a2794025e2daa56d7123fa0274593420
