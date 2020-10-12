@@ -9,10 +9,14 @@ $(document).ready(function(){
         pagination:true,
         autoPlay:true
     });
-<<<<<<< HEAD
-});
 
- 
-=======
-});
->>>>>>> 5e46cac4a2794025e2daa56d7123fa0274593420
+
+
+//Preloader
+
+window.onload = function() {
+    let preloader = document.getElementById('preloader');
+    preloader.style.display = 'none';
+};
+
+

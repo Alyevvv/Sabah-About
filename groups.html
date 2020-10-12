@@ -25,6 +25,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="shorcut icon" href="img/download.png">
     <!-- Main Style -->
     <link rel="stylesheet" type="text/css" href="css/groups.css">
 
@@ -32,593 +33,609 @@
 </head>
 
 <body>
+     <!--Preloader-->
+     <div class="preloader" id="preloader">
+        <div id="fountainG">
+            <div id="fountainG_1" class="fountainG"></div>
+            <div id="fountainG_2" class="fountainG"></div>
+            <div id="fountainG_3" class="fountainG"></div>
+            <div id="fountainG_4" class="fountainG"></div>
+            <div id="fountainG_5" class="fountainG"></div>
+            <div id="fountainG_6" class="fountainG"></div>
+            <div id="fountainG_7" class="fountainG"></div>
+            <div id="fountainG_8" class="fountainG"></div>
+        </div>
+    </div>
+
     <!-- NAVBAR START -->
+    <main>
+        <nav class="navbar navbar-expand-md navbar-dark  fixed-top">
+            <div class="container">
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a href="home.html" class="navbar-brand"><img src="img/footer-logo.png"></a>
+                <div class=" navbar-collapse collapse" id="navbarCollapse">
+                    <ul class="navbar-nav ml-auto ">
+                        <li class="nav-item">
+                            <a class="nav-link" href="home.html">Ana səhifə
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">Haqqımızda
+                            </a>
+                        </li>
 
-    <body>
-        <main>
-            <nav class="navbar navbar-expand-md navbar-dark  fixed-top">
-                <div class="container">
-                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <a href="home.html" class="navbar-brand"><img src="img/footer-logo.png"></a>
-                    <div class=" navbar-collapse collapse" id="navbarCollapse">
-                        <ul class="navbar-nav ml-auto ">
-                            <li class="nav-item">
-                                <a class="nav-link" href="home.html">Ana səhifə
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="about.html">Haqqımızda
-                                </a>
-                            </li>
-
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    İxtisaslar
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right animate slideIn"
-                                    aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="specialties.html">Ixtisasların üstünlükləri</a>
-                                    <a class="dropdown-item" href="groups.html">Qruplar və Fənlər</a>
-                                </div>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Müəllimlər
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right animate slideIn"
-                                    aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="teachers-table.html">Tədris etdikləri fənlər</a>
-                                    <a class="dropdown-item" href="teachers-recommend.html">Tövsiyələr</a>
-                                </div>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tələbələr
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right animate slideIn"
-                                    aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="inner.html">Tədbirlər</a>
-                                    <a class="dropdown-item" href="Sabah-achivements.html">Ugurlar</a>
-                                    <a class="dropdown-item" href="Sabah-volunteer.html">Könüllülük</a>
-                                </div>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Xəbər və Elanlar
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right animate slideIn"
-                                    aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="news.html">Xəbərlər</a>
-                                    <a class="dropdown-item" href="announcement.html">Elanlar</a>
-                                </div>
-                            </li>
-                        </ul>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                İxtisaslar
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right animate slideIn"
+                                aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="specialties.html">Ixtisasların üstünlükləri</a>
+                                <a class="dropdown-item" href="groups.html">Qruplar və Fənlər</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Müəllimlər
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right animate slideIn"
+                                aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="teachers-table.html">Tədris etdikləri fənlər</a>
+                                <a class="dropdown-item" href="teachers-recommend.html">Tövsiyələr</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tələbələr
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right animate slideIn"
+                                aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="inner.html">Tədbirlər</a>
+                                <a class="dropdown-item" href="Sabah-achivements.html">Ugurlar</a>
+                                <a class="dropdown-item" href="Sabah-volunteer.html">Könüllülük</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Xəbər və Elanlar
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right animate slideIn"
+                                aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="news.html">Xəbərlər</a>
+                                <a class="dropdown-item" href="announcement.html">Elanlar</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- NAVBAR END -->
+        <!--SITE TITLE START-->
+        <section id="site-title">
+            <div class="col-lg-12">
+                <div class="container-fluid"">
+                    <div class=" row">
+                    <div class="col-lg-12">
+                        <div class="site-tit">
+                            <h1>Qruplar/Fənlər</h1>
+                        </div>
                     </div>
                 </div>
-            </nav>
-            <!-- NAVBAR END -->
-            <!--SITE TITLE START-->
-            <section id="site-title">
-                <div class="col-lg-12">
-                    <div class="container-fluid"">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="site-tit">
-                                <h1>Qruplar/Fənlər</h1>
+            </div>
+            </div>
+        </section>
+        <!--Site TITLE END-->
+        <!--TABLE START-->
+        <header id="headerSection">
+            <div style="overflow-x:auto;" class="scrollit">
+                <table class="content-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th><b>
+                                    <h4>Fənnın adı</h4>
+                                </b></th>
+                            <th><b>
+                                    <h4>Fənnin saatı</h4><b></th>
+                            <th><b>
+                                    <h4>Kredit miqdarı</h4><b></th>
+                            <th><b>
+                                    <h4>Qayıb limiti</h4><b></th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>İngilis dili</td>
+                            <td>45 saat</td>
+                            <td>8</td>
+                            <td>10</td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td>Riyazi analiz</td>
+                            <td>60 saat</td>
+                            <td>4</td>
+                            <td>12</td>
+                        </tr>
+
+                        <tr>
+                            <td>3</td>
+                            <td>Fizika</td>
+                            <td>30 saat</td>
+                            <td>5</td>
+                            <td>7</td>
+                        </tr>
+
+                        <tr>
+                            <td>4</td>
+                            <td>İngilis dili</td>
+                            <td>45 saat</td>
+                            <td>8</td>
+                            <td>10</td>
+                        </tr>
+
+                        <tr>
+                            <td>5</td>
+                            <td>İngilis dili</td>
+                            <td>45 saat</td>
+                            <td>8</td>
+                            <td>10</td>
+                        </tr>
+
+                        <tr>
+                            <td>6</td>
+                            <td>İngilis dili</td>
+                            <td>45 saat</td>
+                            <td>8</td>
+                            <td>10</td>
+                        </tr>
+
+                        <tr>
+                            <td>7</td>
+                            <td>İngilis dili</td>
+                            <td>45 saat</td>
+                            <td>8</td>
+                            <td>10</td>
+                        </tr>
+
+                        <tr>
+                            <td>8</td>
+                            <td>İngilis dili</td>
+                            <td>45 saat</td>
+                            <td>8</td>
+                            <td>10</td>
+                        </tr>
+
+                        <tr>
+                            <td>9</td>
+                            <td>İngilis dili</td>
+                            <td>45 saat</td>
+                            <td>8</td>
+                            <td>10</td>
+                        </tr>
+
+                        <tr>
+                            <td>10</td>
+                            <td>İngilis dili</td>
+                            <td>45 saat</td>
+                            <td>8</td>
+                            <td>10</td>
+                        </tr>
+
+                        <tr>
+                            <td>11</td>
+                            <td>İngilis dili</td>
+                            <td>45 saat</td>
+                            <td>8</td>
+                            <td>10</td>
+                        </tr>
+
+                        <tr>
+                            <td>12</td>
+                            <td>İngilis dili</td>
+                            <td>45 saat</td>
+                            <td>8</td>
+                            <td>10</td>
+                        </tr>
+
+                        <tr>
+                            <td>13</td>
+                            <td>İngilis dili</td>
+                            <td>45 saat</td>
+                            <td>8</td>
+                            <td>10</td>
+                        </tr>
+
+                        <tr>
+                            <td>14</td>
+                            <td>İngilis dili</td>
+                            <td>45 saat</td>
+                            <td>8</td>
+                            <td>10</td>
+                        </tr>
+
+                        <tr>
+                            <td>15</td>
+                            <td>İngilis dili</td>
+                            <td>45 saat</td>
+                            <td>8</td>
+                            <td>10</td>
+                        </tr>
+
+                        <tr>
+                            <td>16</td>
+                            <td>İngilis dili</td>
+                            <td>45 saat</td>
+                            <td>8</td>
+                            <td>10</td>
+                        </tr>
+
+                        <tr>
+                            <td>17</td>
+                            <td>İngilis dili</td>
+                            <td>45 saat</td>
+                            <td>8</td>
+                            <td>10</td>
+                        </tr>
+
+                        <tr>
+                            <td>18</td>
+                            <td>İngilis dili</td>
+                            <td>45 saat</td>
+                            <td>8</td>
+                            <td>10</td>
+                        </tr>
+
+                        <tr>
+                            <td>19</td>
+                            <td>İngilis dili</td>
+                            <td>45 saat</td>
+                            <td>8</td>
+                            <td>10</td>
+                        </tr>
+
+                        <tr>
+                            <td>20</td>
+                            <td>İngilis dili</td>
+                            <td>45 saat</td>
+                            <td>8</td>
+                            <td>10</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </header>
+        <!--TABLE END-->
+
+
+
+        <!--CONTENT START-->
+
+        <section id="groups">
+            <div class="container">
+                <div class="specialties-title">
+                    <h1>İxtisaslar</h1>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="accordion" id="accordionExample">
+                            <div class="card">
+                                <div class="card-header" id="headingOne">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block" type="button" data-toggle="collapse"
+                                            data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            <h6>Riyaziyyat müəllimliyi </h6>
+                                        </button>
+                                    </h2>
+                                </div>
+
+                                <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <ul>
+                                            <li><a href="#">Qrup 1</a></li>
+                                            <li><a href="#">Qrup 2</a></li>
+                                            <li><a href="#">Qrup 3</a></li>
+                                            <li><a href="#">Qrup 4</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingTwo">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block" type="button" data-toggle="collapse"
+                                            data-target="#collapseTwo" aria-expanded="false"
+                                            aria-controls="collapseTwo">
+                                            <h6>Fizika müəllimliyi</h6>
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <ul>
+                                            <li><a href="#">Qrup 1</a></li>
+                                            <li><a href="#">Qrup 2</a></li>
+                                            <li><a href="#">Qrup 3</a></li>
+                                            <li><a href="#">Qrup 4</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingThree">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block" type="button" data-toggle="collapse"
+                                            data-target="#collapseThree" aria-expanded="false"
+                                            aria-controls="collapseThree">
+                                            <h6>Kimya müəllimliyi</h6>
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <ul>
+                                            <li><a href="#">Qrup 1</a></li>
+                                            <li><a href="#">Qrup 2</a></li>
+                                            <li><a href="#">Qrup 3</a></li>
+                                            <li><a href="#">Qrup 4</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingFour">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block" type="button" data-toggle="collapse"
+                                            data-target="#collapseFour" aria-expanded="false"
+                                            aria-controls="collapseFour">
+                                            <h6>Kompüter elmləri</h6>
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <ul>
+                                            <li><a href="#">Qrup 1</a></li>
+                                            <li><a href="#">Qrup 2</a></li>
+                                            <li><a href="#">Qrup 3</a></li>
+                                            <li><a href="#">Qrup 4</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    </div>
-                </div>
-            </section>
-            <!--Site TITLE END-->
-            <!--TABLE START-->
-          <header id="headerSection">
-                <div style="overflow-x:auto;" class="scrollit">
-                    <table class="content-table">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th><b>
-                                        <h4>Fənnın adı</h4>
-                                    </b></th>
-                                <th><b>
-                                        <h4>Fənnin saatı</h4><b></th>
-                                <th><b>
-                                        <h4>Kredit miqdarı</h4><b></th>
-                                <th><b>
-                                        <h4>Qayıb limiti</h4><b></th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>İngilis dili</td>
-                                <td>45 saat</td>
-                                <td>8</td>
-                                <td>10</td>
-                            </tr>
-
-                            <tr>
-                                <td>2</td>
-                                <td>Riyazi analiz</td>
-                                <td>60 saat</td>
-                                <td>4</td>
-                                <td>12</td>
-                            </tr>
-
-                            <tr>
-                                <td>3</td>
-                                <td>Fizika</td>
-                                <td>30 saat</td>
-                                <td>5</td>
-                                <td>7</td>
-                            </tr>
-
-                            <tr>
-                                <td>4</td>
-                                <td>İngilis dili</td>
-                                <td>45 saat</td>
-                                <td>8</td>
-                                <td>10</td>
-                            </tr>
-
-                            <tr>
-                                <td>5</td>
-                                <td>İngilis dili</td>
-                                <td>45 saat</td>
-                                <td>8</td>
-                                <td>10</td>
-                            </tr>
-
-                            <tr>
-                                <td>6</td>
-                                <td>İngilis dili</td>
-                                <td>45 saat</td>
-                                <td>8</td>
-                                <td>10</td>
-                            </tr>
-
-                            <tr>
-                                <td>7</td>
-                                <td>İngilis dili</td>
-                                <td>45 saat</td>
-                                <td>8</td>
-                                <td>10</td>
-                            </tr>
-
-                            <tr>
-                                <td>8</td>
-                                <td>İngilis dili</td>
-                                <td>45 saat</td>
-                                <td>8</td>
-                                <td>10</td>
-                            </tr>
-
-                            <tr>
-                                <td>9</td>
-                                <td>İngilis dili</td>
-                                <td>45 saat</td>
-                                <td>8</td>
-                                <td>10</td>
-                            </tr>
-
-                            <tr>
-                                <td>10</td>
-                                <td>İngilis dili</td>
-                                <td>45 saat</td>
-                                <td>8</td>
-                                <td>10</td>
-                            </tr>
-
-                            <tr>
-                                <td>11</td>
-                                <td>İngilis dili</td>
-                                <td>45 saat</td>
-                                <td>8</td>
-                                <td>10</td>
-                            </tr>
-
-                            <tr>
-                                <td>12</td>
-                                <td>İngilis dili</td>
-                                <td>45 saat</td>
-                                <td>8</td>
-                                <td>10</td>
-                            </tr>
-
-                            <tr>
-                                <td>13</td>
-                                <td>İngilis dili</td>
-                                <td>45 saat</td>
-                                <td>8</td>
-                                <td>10</td>
-                            </tr>
-
-                            <tr>
-                                <td>14</td>
-                                <td>İngilis dili</td>
-                                <td>45 saat</td>
-                                <td>8</td>
-                                <td>10</td>
-                            </tr>
-
-                            <tr>
-                                <td>15</td>
-                                <td>İngilis dili</td>
-                                <td>45 saat</td>
-                                <td>8</td>
-                                <td>10</td>
-                            </tr>
-
-                            <tr>
-                                <td>16</td>
-                                <td>İngilis dili</td>
-                                <td>45 saat</td>
-                                <td>8</td>
-                                <td>10</td>
-                            </tr>
-
-                            <tr>
-                                <td>17</td>
-                                <td>İngilis dili</td>
-                                <td>45 saat</td>
-                                <td>8</td>
-                                <td>10</td>
-                            </tr>
-
-                            <tr>
-                                <td>18</td>
-                                <td>İngilis dili</td>
-                                <td>45 saat</td>
-                                <td>8</td>
-                                <td>10</td>
-                            </tr>
-
-                            <tr>
-                                <td>19</td>
-                                <td>İngilis dili</td>
-                                <td>45 saat</td>
-                                <td>8</td>
-                                <td>10</td>
-                            </tr>
-
-                            <tr>
-                                <td>20</td>
-                                <td>İngilis dili</td>
-                                <td>45 saat</td>
-                                <td>8</td>
-                                <td>10</td>
-                            </tr>
-
-                        </tbody>
-                    </table>
-                </div>
-            </header>
-            <!--TABLE END-->
 
 
-
-            <!--CONTENT START-->
-            
- <section id="groups">
-    <div class="container">
-        <div class="specialties-title"><h1>İxtisaslar</h1></div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="accordion" id="accordionExample">
-                    <div class="card">
-                        <div class="card-header" id="headingOne">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link btn-block" type="button" data-toggle="collapse"
-                                    data-target="#collapseOne" aria-expanded="true"
-                                    aria-controls="collapseOne">
-                                    <h6>Riyaziyyat müəllimliyi </h6>   
-                                </button>
-                            </h2>
+                    <div class="col-md-6">
+                        <div class="accordion2" id="accordionExample2">
+                            <div class="card">
+                                <div class="card-header" id="headingFive">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block" type="button" data-toggle="collapse"
+                                            data-target="#collapseFive" aria-expanded="false"
+                                            aria-controls="collapseFive">
+                                            <h6>Coğrafiya müəllimliyi</h6>
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
+                                    data-parent="#accordionExample2">
+                                    <div class="card-body">
+                                        <ul>
+                                            <li><a href="#">Qrup 1</a></li>
+                                            <li><a href="#">Qrup 2</a></li>
+                                            <li><a href="#">Qrup 3</a></li>
+                                            <li><a href="#">Qrup 4</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingSix">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block" type="button" data-toggle="collapse"
+                                            data-target="#collapseSix" aria-expanded="false"
+                                            aria-controls="collapseSix">
+                                            <h6>Biologiya müəllimliyi</h6>
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseSix" class="collapse" aria-labelledby="headingSix"
+                                    data-parent="#accordionExample2">
+                                    <div class="card-body">
+                                        <ul>
+                                            <li><a href="#">Qrup 1</a></li>
+                                            <li><a href="#">Qrup 2</a></li>
+                                            <li><a href="#">Qrup 3</a></li>
+                                            <li><a href="#">Qrup 4</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingSeven">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block" type="button" data-toggle="collapse"
+                                            data-target="#collapseSeven" aria-expanded="false"
+                                            aria-controls="collapseSeven">
+                                            <h6>Psixologiya</h6>
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven"
+                                    data-parent="#accordionExample2">
+                                    <div class="card-body">
+                                        <ul>
+                                            <li><a href="#">Qrup 1</a></li>
+                                            <li><a href="#">Qrup 2</a></li>
+                                            <li><a href="#">Qrup 3</a></li>
+                                            <li><a href="#">Qrup 4</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingEight">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block" type="button" data-toggle="collapse"
+                                            data-target="#collapseEight" aria-expanded="false"
+                                            aria-controls="collapseEight">
+                                            <h6>Hüquqşünaslıq</h6>
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseEight" class="collapse" aria-labelledby="headingEight"
+                                    data-parent="#accordionExample2">
+                                    <div class="card-body">
+                                        <ul>
+                                            <li><a href="#">Qrup 1</a></li>
+                                            <li><a href="#">Qrup 2</a></li>
+                                            <li><a href="#">Qrup 3</a></li>
+                                            <li><a href="#">Qrup 4</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingNine">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block" type="button" data-toggle="collapse"
+                                            data-target="#collapseNine" aria-expanded="false"
+                                            aria-controls="collapseNine">
+                                            <h6>Tarix müəllimliyi</h6>
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseNine" class="collapse" aria-labelledby="headingNine"
+                                    data-parent="#accordionExample2">
+                                    <div class="card-body">
+                                        <ul>
+                                            <li><a href="#">Qrup 1</a></li>
+                                            <li><a href="#">Qrup 2</a></li>
+                                            <li><a href="#">Qrup 3</a></li>
+                                            <li><a href="#">Qrup 4</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                    </div>
+        </section>
 
-                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
-                            data-parent="#accordionExample">
-                            <div class="card-body">
-                                <ul>
-                                    <li><a href="#">Qrup 1</a></li>
-                                    <li><a href="#">Qrup 2</a></li>
-                                    <li><a href="#">Qrup 3</a></li>
-                                    <li><a href="#">Qrup 4</a></li>
+
+        <!-- CONTACT START -->
+        <section id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="contact-logo">
+                            <div class="logo-img">
+                                <img src="img/logo.png">
+                            </div>
+                            <div>
+                                <p class="text-left text-muted">Interactively scale team building testing procedures
+                                    visavis cost effective human capital. Energistically synthesize resource
+                                    leveling process improvements.</p>
+                            </div>
+                            <div class="contact-button">
+                                <button>Bizə Qatıl</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="contact-title">
+                            <div class="universty-name">
+                                <p>SABAH </p>
+                            </div>
+                            <div class="contact-items text-muted">
+                                <ul class="contact-item text-muted">
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">International College</a></li>
+                                    <li><a href="#">Registration</a></li>
+                                    <li><a href="#">History</a></li>
+                                    <li><a href="#">OKS</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card-header" id="headingTwo">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link btn-block" type="button" data-toggle="collapse"
-                                    data-target="#collapseTwo" aria-expanded="false"
-                                    aria-controls="collapseTwo">
-                                    <h6>Fizika müəllimliyi</h6>
-                                </button>
-                            </h2>
-                        </div>
-                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-                            data-parent="#accordionExample">
-                            <div class="card-body">
-                                <ul>
-                                    <li><a href="#">Qrup 1</a></li>
-                                    <li><a href="#">Qrup 2</a></li>
-                                    <li><a href="#">Qrup 3</a></li>
-                                    <li><a href="#">Qrup 4</a></li>
+                    <div class="col-md-2">
+                        <div class="contact-title">
+                            <div class="universty-name">
+                                <p>SABAH</p>
+                            </div>
+                            <div class="contact-items">
+                                <ul class="contact-item">
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">International College</a></li>
+                                    <li><a href="#">Registration</a></li>
+                                    <li><a href="#">History</a></li>
+                                    <li><a href="#">OKS</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card-header" id="headingThree">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link btn-block" type="button" data-toggle="collapse"
-                                    data-target="#collapseThree" aria-expanded="false"
-                                    aria-controls="collapseThree">
-                                    <h6>Kimya müəllimliyi</h6>
-                                </button>
-                            </h2>
-                        </div>
-                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                            data-parent="#accordionExample">
-                            <div class="card-body">
-                                <ul>
-                                    <li><a href="#">Qrup 1</a></li>
-                                    <li><a href="#">Qrup 2</a></li>
-                                    <li><a href="#">Qrup 3</a></li>
-                                    <li><a href="#">Qrup 4</a></li>
-                                </ul>
+                    <div class="col-md-4 infos text-center">
+                        <div class="contact-info">
+                            <div class="contact-number">
+                                <i class="fas fa-phone-square-alt"></i>
+                                <h5>Əlaqə nömrəmiz</h5>
+                                <p>000-000-00-00</p>
                             </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingFour">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link btn-block" type="button" data-toggle="collapse"
-                                    data-target="#collapseFour" aria-expanded="false"
-                                    aria-controls="collapseFour">
-                                    <h6>Kompüter elmləri</h6>
-                                </button>
-                            </h2>
-                        </div>
-                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
-                            data-parent="#accordionExample">
-                            <div class="card-body">
-                                <ul>
-                                    <li><a href="#">Qrup 1</a></li>
-                                    <li><a href="#">Qrup 2</a></li>
-                                    <li><a href="#">Qrup 3</a></li>
-                                    <li><a href="#">Qrup 4</a></li>
+                            <hr>
+                            <div class="socials">
+                                <ul class="social">
+                                    <li>
+                                        <i class="fas fa-phone-square-alt"></i>
+                                        <p>info@medicpress.com</p>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-phone-square-alt"></i>
+                                        <p>sabah.edu.az</p>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-phone-square-alt"></i>
+                                        <p>Elmler m. Bakı Dövlət Universiteti</p>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-             
-            <div class="col-md-6">
-                <div class="accordion2" id="accordionExample2">
-                    <div class="card">
-                        <div class="card-header" id="headingFive">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link btn-block" type="button" data-toggle="collapse"
-                                    data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                    <h6>Coğrafiya müəllimliyi</h6>
-                                </button>
-                            </h2>
-                        </div>
-                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
-                            data-parent="#accordionExample2">
-                            <div class="card-body">
-                                <ul>
-                                    <li><a href="#">Qrup 1</a></li>
-                                    <li><a href="#">Qrup 2</a></li>
-                                    <li><a href="#">Qrup 3</a></li>
-                                    <li><a href="#">Qrup 4</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingSix">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link btn-block" type="button" data-toggle="collapse"
-                                    data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                    <h6>Biologiya müəllimliyi</h6>
-                                </button>
-                            </h2>
-                        </div>
-                        <div id="collapseSix" class="collapse" aria-labelledby="headingSix"
-                            data-parent="#accordionExample2">
-                            <div class="card-body">
-                                <ul>
-                                    <li><a href="#">Qrup 1</a></li>
-                                    <li><a href="#">Qrup 2</a></li>
-                                    <li><a href="#">Qrup 3</a></li>
-                                    <li><a href="#">Qrup 4</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingSeven">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link btn-block" type="button" data-toggle="collapse"
-                                    data-target="#collapseSeven" aria-expanded="false"
-                                    aria-controls="collapseSeven">
-                                    <h6>Psixologiya</h6>
-                                </button>
-                            </h2>
-                        </div>
-                        <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven"
-                            data-parent="#accordionExample2">
-                            <div class="card-body">
-                                <ul>
-                                    <li><a href="#">Qrup 1</a></li>
-                                    <li><a href="#">Qrup 2</a></li>
-                                    <li><a href="#">Qrup 3</a></li>
-                                    <li><a href="#">Qrup 4</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingEight">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link btn-block" type="button" data-toggle="collapse"
-                                    data-target="#collapseEight" aria-expanded="false"
-                                    aria-controls="collapseEight">
-                                    <h6>Hüquqşünaslıq</h6>
-                                </button>
-                            </h2>
-                        </div>
-                        <div id="collapseEight" class="collapse" aria-labelledby="headingEight"
-                            data-parent="#accordionExample2">
-                            <div class="card-body">
-                                <ul>
-                                    <li><a href="#">Qrup 1</a></li>
-                                    <li><a href="#">Qrup 2</a></li>
-                                    <li><a href="#">Qrup 3</a></li>
-                                    <li><a href="#">Qrup 4</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingNine">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link btn-block" type="button" data-toggle="collapse"
-                                    data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                                    <h6>Tarix müəllimliyi</h6>
-                                </button>
-                            </h2>
-                        </div>
-                        <div id="collapseNine" class="collapse" aria-labelledby="headingNine"
-                            data-parent="#accordionExample2">
-                            <div class="card-body">
-                                <ul>
-                                    <li><a href="#">Qrup 1</a></li>
-                                    <li><a href="#">Qrup 2</a></li>
-                                    <li><a href="#">Qrup 3</a></li>
-                                    <li><a href="#">Qrup 4</a></li>
-                                </ul>
-                            </div>
-                        </div>
+        </section>
+        <!-- CONTACT END -->
+        <!-- FOOTER START -->
+        <section id="footer" class="py-2">
+            <div class="container-fluid">
+                <div class="row text-center">
+                    <div class="col-md-6 mx-auto">
+                        <p class="lead">NO Copyright &copy; SABAH</p>
                     </div>
                 </div>
             </div>
-</section>
+        </section>
+    </main>
+    <!-- FOOTER END -->
 
+    <!-- CONTENT  -->
 
-            <!-- CONTACT START -->
-            <section id="contact">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="contact-logo">
-                                <div class="logo-img">
-                                    <img src="img/logo.png">
-                                </div>
-                                <div>
-                                    <p class="text-left text-muted">Interactively scale team building testing procedures
-                                        visavis cost effective human capital. Energistically synthesize resource
-                                        leveling process improvements.</p>
-                                </div>
-                                <div class="contact-button">
-                                    <button>Bizə Qatıl</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="contact-title">
-                                <div class="universty-name">
-                                    <p>SABAH </p>
-                                </div>
-                                <div class="contact-items text-muted">
-                                    <ul class="contact-item text-muted">
-                                        <li><a href="#">About Us</a></li>
-                                        <li><a href="#">International College</a></li>
-                                        <li><a href="#">Registration</a></li>
-                                        <li><a href="#">History</a></li>
-                                        <li><a href="#">OKS</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="contact-title">
-                                <div class="universty-name">
-                                    <p>Bizimlə öyrən</p>
-                                </div>
-                                <div class="contact-items">
-                                    <ul class="contact-item">
-                                        <li><a href="#">About Us</a></li>
-                                        <li><a href="#">International College</a></li>
-                                        <li><a href="#">Registration</a></li>
-                                        <li><a href="#">History</a></li>
-                                        <li><a href="#">OKS</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 infos text-center">
-                            <div class="contact-info">
-                                <div class="contact-number">
-                                    <i class="fas fa-phone-square-alt"></i>
-                                    <h5>Əlaqə nömrəmiz</h5>
-                                    <p>000-000-00-00</p>
-                                </div>
-                                <hr>
-                                <div class="socials">
-                                    <ul class="social">
-                                        <li>
-                                            <i class="fas fa-phone-square-alt"></i>
-                                            <p>info@medicpress.com</p>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-phone-square-alt"></i>
-                                            <p>sabah.edu.az</p>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-phone-square-alt"></i>
-                                            <p>Elmler m. Bakı Dövlət Universiteti</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- CONTACT END -->
-            <!-- FOOTER START -->
-            <section id="footer" class="py-2">
-                <div class="container-fluid">
-                    <div class="row text-center">
-                        <div class="col-md-6 mx-auto">
-                            <p class="lead">NO Copyright &copy; SABAH</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <!-- FOOTER END -->
-
-        <!-- CONTENT  -->
-
-        <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-        <script type="text/javascript"
-            src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
-        <script src="js/script.js"></script>
-        <script src="js/lightbox.min.js"></script>
-    </body>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js">
+    </script>
+    <script src="js/script.js"></script>
+    <script src="js/lightbox.min.js"></script>
+</body>
 
 </html>
