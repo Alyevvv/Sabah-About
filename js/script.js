@@ -9,7 +9,7 @@ $(document).ready(function(){
         pagination:true,
         autoPlay:true
     });
-
+});
 
 
 //Preloader
@@ -18,5 +18,3 @@ window.onload = function() {
     let preloader = document.getElementById('preloader');
     preloader.style.display = 'none';
 };
-
-
