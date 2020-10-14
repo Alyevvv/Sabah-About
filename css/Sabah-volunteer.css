@@ -217,8 +217,7 @@
   }
   
 
-
-/* Navbar */
+/*Navbar*/
 .navbar {
     background-color: #1A477D !important;
     border-bottom: #8FB714 1px solid;
@@ -242,40 +241,11 @@
     }
 }
 
-@media (min-width: 360px) {
-    .animate {
-        animation-duration: 0.3s;
-        -webkit-animation-duration: 0.3s;
-        animation-fill-mode: both;
-        -webkit-animation-fill-mode: both;
-    }
-}
-
-
-@keyframes slideIn {
-    0% {
-        -webkit-transform: transform;
-        -webkit-opacity: 0;
-    }
-
-    100% {
-        -webkit-transform: translateY(0);
-        -webkit-opacity: 1;
-    }
-
-    0% {
-        -webkit-transform: translateY(1rem);
-        -webkit-opacity: 0;
-    }
-}
-
 .slideIn {
     -webkit-animation-name: slideIn;
     animation-name: slideIn;
 }
 
-
-/* Dropdown menu */
 .dropdown-menu {
     margin-top: 17px !important;
     background-color: #90B914;
@@ -290,8 +260,6 @@
     color: #fff;
 }
 
-
-/* Site titlwe section*/
 #site-title{
     font-size: 30px;
     margin-top: 70px;
@@ -310,18 +278,9 @@
     font-size: 60px;
 }
 
-
-
-
-
-
-
-/* Content section*/
-
 #about {
     margin-top: 190px;
 }
-
 
 .card{
  box-shadow: 0 0 35px 0 rgba(154, 161, 171, 0.15);
@@ -329,14 +288,6 @@
  margin-top: 30px;
 }
 
-    
-
-
-
-
-
-
-/*Contact section*/
 #contact {
     margin-top: 100px;
     background-color: #E9EDF0;
@@ -384,7 +335,6 @@
     padding-top: 40px;
 }
 
-/*FOOTER SECTION*/
 #footer {
     background-color: #1A477D;
 }
@@ -402,11 +352,6 @@
     }    
 }
 
-
-
-
-
-
 @media(max-width: 768px){
 
     .card-img{
@@ -414,11 +359,6 @@
     }
  
 }
-
-
-
-
-
 
 @media(max-width: 415px) {
 
