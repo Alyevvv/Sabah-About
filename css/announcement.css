@@ -4,7 +4,11 @@
   padding: 0;
   box-sizing: border-box;
   list-style: none;
+<<<<<<< HEAD
+  overflow-x: hidden;
+=======
 
+>>>>>>> a2228641fad06525bb2044d9e1697e764cdcd705
 }
 .no-gutters {
   margin-right: 0;
