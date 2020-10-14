@@ -35,7 +35,7 @@
   background-color: #90B914 ;
 }
 .dropdown-menu a{
-  color: #fff;
+  color: #fff !important;
 }
 .dropdown-menu a:hover{
   background-color: #305E75;
