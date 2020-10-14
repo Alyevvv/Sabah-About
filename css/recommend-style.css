@@ -35,51 +35,51 @@ body{
 }
 
 					/*TESTIMONIAL SECTION*/
-#testimonial{
-	height: 100%;
-	width: 100%;
-}
-.testimonial{
-	background-color: #90B914;
-	text-align: center;
-	padding: 30px 30px 50px;
-	margin: -50px 15px 100px;
-	position: relative;
-	margin-top: 168px;
+	#testimonial {
+    height: 100%;
+    width: 100%;
 }
 
-.testimonial .name{
-	display: inline-block;
-	font-size: 20px;
-	font-family: 'Roboto Slab', serif;
-	color: #1A477D;
-	margin-bottom: 20px;
+.testimonial {
+    background-color: #90B914;
+    text-align: center;
+    padding: 30px 30px 50px;
+    margin: -50px 15px 100px;
+    position: relative;
+    margin-top: 168px;
 }
 
-.testimonial .icon{
-	display: inline-block;
-	font-size: 50px;
-	color: #1A477D;
-	margin-bottom: 50px;
-	opacity: 0.6;
-}
-.testimonial .description{
-	font-size: 20px;
-	font-weight: 400;
-	color: #1A477D;
-	font-family: 'Roboto Slab', serif;
-	text-align: justify;
-	margin-bottom: 30px;
-	opacity: 0.9;
+.testimonial .name {
+	  font-size: 22px;
+    font-weight: 400;
+    color: #1A477D;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-.testimonial .title{
-	font-size: 15px;
-	font-weight: bold;
-	color: #1A477D;
-	text-transform: capitalize;
-	margin: 5 0 5px 0;
+.testimonial .icon {
+    display: inline-block;
+    font-size: 40px;
+    color: #1A477D;
+    margin-bottom: 20px;
+    opacity: 0.6;
 }
+
+.testimonial .description {
+    font-size: 16px;
+    font-weight: 400;
+    color: #1A477D;
+    text-align: justify;
+    margin-bottom: 30px;
+}
+
+.testimonial .title {
+    color: #1A477D;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Roboto Slab', serif;
+}
+
 
 #contact{
 	margin-top: 100px;
