@@ -4,12 +4,6 @@
 	box-sizing: border-box;
 	list-style: none;
 }
-.no-gutters {
-  margin-right: 0;
-  margin-left: 0;
-
-  
-}
 
 /* Preloader */
 .preloader{
@@ -223,7 +217,7 @@
   }
   
 
-/*NAVBAR SECTION*/
+/*Navbar*/
 .navbar{
 	background-color: #1A477D !important;
 	border-bottom:#8FB714 1px solid;
@@ -247,18 +241,60 @@
 	background-color: #305E75;
 	color: #fff;
 }
-
-		/*BLOG SECTION*/
-#blog{
-	margin-top: 100px;
-}
-.blog-paragraph{
-	margin-left: 273px;
-	width: 50%;
+#elaqe{
+    margin-top: 100px;
 }
 
-		/*CONTACT SECTION*/
-
+#elaqe h3{
+    color:#3D4448;
+    font-size: 24px;
+    margin-bottom: 8px;
+    margin-left: 11px;
+    font-weight: 400;
+}
+#elaqe input{
+    width: 49%;
+    height: 35px;
+    outline: none;
+    border: 1px solid #ced4da;
+    border-radius: 3px;
+    margin-bottom: 15px;
+    padding: 6px 12px;
+}
+textarea{
+    width: 99%;
+    height: 130px;
+    border: 1px solid #ced4da;
+    border-radius: 3px;
+    padding: 6px 12px;
+}
+#elaqe button{
+    margin-top: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: #1A477D;
+    color: #fff;
+    padding: 7px 10px;
+}
+.adress{
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	padding: 3px 1px;
+	background-color:#8FB714 ;
+}
+.adress-block{
+	background-color: #F7F7F7;
+	padding: 10px 15px;
+}
+#elaqe h6{
+	display: inline;
+	margin-left: 5px;
+}
+#elaqe p{
+	margin-left: 22px;
+	display: block;
+}
+    /* CONTACT SECTION */
 #contact{
 	margin-top: 100px;
 	background-color: #E9EDF0;
@@ -307,21 +343,30 @@
 	color: #fff;
 
 }
-@media(max-width:1024px){
-	.blog-paragraph{
-		margin-left:197px;
-		width:59%;
-}
-}
-
-@media(max-width:360px){
-	.blog-paragraph{
-		width: 100%;
+@media(max-width:991px){
+    #elaqe input{
+        width:173%;
+	}
+	textarea{
+		width: 173%;
+	}
+	.contact-adress{
+		width: 85%;
+		margin-top: 30px;
+		margin-left: 27px;
 	}
 }
 @media(max-width:768px){
-	.blog-paragraph{
+    #elaqe input{
+        width: 100%;
+	}
+	textarea{
 		width: 100%;
-		margin-left: 0;
+	}
+	.contact-adress{
+		width: 85%;
+		margin-top: 30px;
+		margin-left: 27px;
+
 	}
 }
