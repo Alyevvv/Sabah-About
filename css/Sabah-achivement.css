@@ -227,7 +227,9 @@
     color: white !important;
     transition: color .5s ease
 }
-
+.navbar-dark .navbar-toggler{
+	outline: none;
+}
 .nav-link:hover {
     color: #90B914 !important;
 }

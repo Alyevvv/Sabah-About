@@ -236,6 +236,11 @@ transform:scale(.3);
   color:  #90B914 !important;
 }
 
+.navbar-dark .navbar-toggler{
+	outline: none;
+}
+
+
 @media (min-width: 992px) {
   .animate {
       animation-duration: 0.3s;
@@ -281,6 +286,7 @@ transform:scale(.3);
 
 
 /* Dropdown menu */
+
 .dropdown-menu{
   margin-top: 16px !important;
   background-color: #90B914 ;
