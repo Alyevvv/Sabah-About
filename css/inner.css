@@ -229,7 +229,7 @@
 /*NAVBAR SECTION*/
 .navbar{
 	background-color: #1A477D !important;
-	border-bottom:#8FB714 1px solid;
+	border-bottom: #1A477D 1px solid;
 }
 .nav-link{
 	color: white !important;
@@ -238,11 +238,61 @@
 .nav-link:hover{
 	color:  #90B914 !important;
 }
+
 .navbar-dark .navbar-toggler{
 	outline: none;
 }
+
+
+@media (min-width: 992px) {
+    .animate {
+        animation-duration: 0.3s;
+        -webkit-animation-duration: 0.3s;
+        animation-fill-mode: both;
+        -webkit-animation-fill-mode: both;
+    }
+}
+
+
+@media (min-width: 360px) {
+    .animate {
+        animation-duration: 0.3s;
+        -webkit-animation-duration: 0.3s;
+        animation-fill-mode: both;
+        -webkit-animation-fill-mode: both;
+    }
+}
+
+
+
+@keyframes slideIn {
+    0% {
+        -webkit-transform: transform;
+        -webkit-opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        -webkit-opacity: 1;
+    }
+
+    0% {
+        -webkit-transform: translateY(1rem);
+        -webkit-opacity: 0;
+    }
+}
+
+.slideIn {
+    -webkit-animation-name: slideIn;
+    animation-name: slideIn;
+}
+
+
+
+/* Dropdown menu */
+
 .dropdown-menu{
-	margin-top: 17px !important;
+	margin-top: 16px !important;
 	background-color: #90B914 ;
 }
 .dropdown-menu a{
