@@ -235,7 +235,9 @@ transform:scale(.3);
 .nav-link:hover{
   color:  #90B914 !important;
 }
-
+.navbar-dark .navbar-toggler{
+	outline: none;
+}
 .dropdown-menu{
   margin-top: 17px !important;
   background-color: #90B914 ;

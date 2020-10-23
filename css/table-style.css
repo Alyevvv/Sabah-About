@@ -236,6 +236,9 @@
 .dropdown-menu a{
 	color: #fff;
 }
+.navbar-dark .navbar-toggler{
+	outline: none;
+}
 .dropdown-menu a:hover{
 	background-color: #305E75;
 	color: #fff;

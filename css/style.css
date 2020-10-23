@@ -229,7 +229,12 @@
 .nav-link:hover{
 	color:  #90B914 !important;
 }
-
+.navbar-dark .navbar-toggler{
+	outline: none;
+}
+.navbar-dark .navbar-toggler{
+	outline: none;
+}
 .dropdown-menu{
 	margin-top: 17px !important;
 	background-color: #90B914 ;
@@ -241,6 +246,7 @@
 	background-color: #305E75;
 	color: #fff;
 }
+
 
 		/*ABOUT SECTION*/
 
@@ -493,9 +499,6 @@
     font-family: 'Roboto Slab', serif;
     font-size: 60px;
 }
-
-
-
 @media(max-width:990px){
 	.overlay2{
 		position: absolute;
@@ -625,3 +628,29 @@
 		margin-bottom: 10px;
 	}
 }
+/* @media (max-width: 990px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggler {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+} */
