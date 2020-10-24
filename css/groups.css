@@ -510,3 +510,10 @@
     color: #fff;
 
 }
+
+
+@media(max-width:414px) {
+    .site-tit h1{
+        font-size: 43px;
+    }
+}
