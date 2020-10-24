@@ -13,11 +13,13 @@ $(document).ready(function(){
 
 
 //Preloader
-
 window.onload = function() {
     let preloader = document.getElementById('preloader');
     preloader.style.display = 'none';
 };
+
+
+
 
 $('.announcement-slider').slick({
     dots: false,
@@ -40,3 +42,5 @@ $('.events').slick({
     prevArrow: $('.prev-arrow-events'),
     nextArrow: $('.next-arrow-events')
 });
+
+
