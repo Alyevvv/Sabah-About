@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block link %}<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">{% endblock %}
+
+{% block title %}Uğurlarımız{% endblock %}
+
+{% block body %}
+
+            <!--SITE TITLE START-->
+            <section id="site-title">
+                <div class="col-lg-12">
+                    <div class="container-fluid"">
+                    <class class=" row">
+                        <div class="col-lg-12">
+                            <div class="site-tit">
+                                <h1>Uğurlar</h1>
+                            </div>
+                        </div>
+                        </class>
+                    </div>
+                </div>
+            </section>
+            <!--Site TITLE END-->
+
+
+    	<section id="about">
+    		<div class="container">
+    			<div class="row">
+    				<div class="col-lg-6 col-md-12 col-sm-12 about-col">
+			            <div class="overlay-container">
+			                <img src="{{ url_for('static', filename='img/about.jpg') }}" class="image img-fluid">
+			                <div class="overlay2">
+			                    <div class="text">
+				                    <h6 class="project-title">Təcrübə proqramlarında tələbələrimiz</h6>
+				                    <div class="overlay-border"></div>
+			                    </div>
+			                </div>
+			            </div>
+           			</div>
+    				<div class="col-lg-6 col-md-12 col-sm-12 about-text">
+    					<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,<br> when an unknown printer took a galley of type and scrambled it to make<br> a type specimen book. It has survived not only five centuries, but also<br> the leap into electronic typesetting, remaining essentially unchanged.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,<br> when an unknown printer took a galley of type and scrambled it to make<br> a type specimen book. It has survived not only five centuries, but also<br> the leap into electronic typesetting, remaining essentially unchanged.</p>
+    				</div>
+    			</div>
+				<div class="row pic-text">
+					<div class="col-lg-6 col-md-12 col-sm-12 about-text">
+						<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,<br> when an unknown printer took a galley of type and scrambled it to make<br> a type specimen book. It has survived not only five centuries, but also<br> the leap into electronic typesetting, remaining essentially unchanged.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,<br> when an unknown printer took a galley of type and scrambled it to make<br> a type specimen book. It has survived not only five centuries, but also<br> the leap into electronic typesetting, remaining essentially unchanged.</p>
+					</div>
+					<div class="col-lg-6 col-md-12 col-sm-12">
+						<div class="overlay-container">
+							<img src="{{ url_for('static', filename='img/about.jpg') }}" class="image img-fluid">
+							<div class="overlay2">
+								<div class="text">
+									<h6 class="project-title">Xaricdə təhsil və mübadilə proqramlarında tələbələrimiz</h6>
+									<div class="overlay-border"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row ">
+					<div class="col-lg-6 col-md-12 col-sm-12">
+						<div class="overlay-container">
+							<img src="{{ url_for('static', filename='img/about.jpg') }}" class="image img-fluid">
+							<div class="overlay2">
+								<div class="text">
+									<h6 class="project-title">Məzunlarımız</h6>
+									<div class="overlay-border"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-12 col-sm-12 about-text">
+						<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,<br> when an unknown printer took a galley of type and scrambled it to make<br> a type specimen book. It has survived not only five centuries, but also<br> the leap into electronic typesetting, remaining essentially unchanged.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,<br> when an unknown printer took a galley of type and scrambled it to make<br> a type specimen book. It has survived not only five centuries, but also<br> the leap into electronic typesetting, remaining essentially unchanged.</p>
+					</div>		
+	    		</div>
+    		</div>
+    	</section>		
+
+
+
+        <!--CONTENT END-->
+
+
+  {% endblock %}
