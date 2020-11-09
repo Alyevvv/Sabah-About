@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Error 404</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="A premium admin dashboard template by Mannatthemes" name="description" />
+        <meta content="Mannatthemes" name="author" />
+
+
+
+        <!-- App css -->
+        <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ url_for('static', filename='css/icons.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ url_for('static', filename='css/metisMenu.min.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ url_for('static', filename='css/style_admin.css') }}" rel="stylesheet" type="text/css" />
+
+    </head>
+
+    <body class="account-body accountbg">
+
+        <!-- Log In page -->
+        <div class="row vh-100 ">
+            <div class="col-12 align-self-center">
+                <div class="auth-page">
+                    <div class="card auth-card shadow-lg">
+                        <div class="card-body">
+                            <div class="px-3">
+                                <div class="auth-logo-box">
+                                   <a href="{{url_for('home')}}"><img src="{{ url_for('static', filename='img/ustunlukler.jpg') }}" height="55" alt="logo" class="auth-logo"></a>
+                                </div><!--end auth-logo-box-->
+                                <img src="{{ url_for('static', filename='img/404.jpg') }}" alt="" class="d-block mx-auto mt-4" height="250">
+                                <div class="text-center auth-logo-text mb-4">
+                                    <h4 class="mt-0 mb-3 mt-5">Səhifə tapılmadı...</h4>
+                                    <a href="{{ url_for('home') }}" class="btn btn-sm btn-primary">Ana Səhifəyə Qayıt</a> 
+                                </div> <!--end auth-logo-text-->
+                            </div><!--end /div-->                                
+                        </div><!--end card-body-->                            
+                    </div><!--end card-->
+                </div><!--end auth-page-->
+            </div><!--end col-->           
+        </div><!--end row-->
+
+        <!-- End Log In page --> 
+        <!-- jQuery  -->
+        <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/metisMenu.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/waves.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/jquery.slimscroll.min.js') }}"></script>
+
+        <!-- App js -->
+        <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+    </body>
+</html>

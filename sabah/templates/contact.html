@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block link %}
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+	integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
+{% endblock %}
+
+{% block title %}Əlaqə{% endblock %}
+
+{% block body %}
+
+<!-- ƏLAQƏ SECTİON -->
+<section id="elaqe">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8">
+				<div class="col-md-12">
+					<h3>ƏLAQƏ FORMASI</h3>
+				</div>
+				<form>
+					<div class="col-md-12">
+						<div class="col-md-12">
+							<input type="text" name="firstName", id="myTextField" placeholder="Adınız">
+							<input type="text" name="lastName" placeholder="Soyadınız">
+						</div>
+						<div class="col-md-12">
+							<input type="email" name="email" placeholder="E-mail">
+							<input type="text" name="phone" placeholder="Telefon">
+						</div>
+						<div class="col-md-12">
+							<textarea placeholder="Mesaj"></textarea>
+						</div>
+						<div class="col-md-12">
+							<button>Göndər</button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="col-md-12 col-lg-4 contact-adress">
+				<div>
+					<div class="adress">
+						<h3>Ünvan</h3>
+					</div>
+					<div class="adress-block">
+						<ul>
+							<li class="adress-icon">
+								<i class="fas fa-map-marker-alt"></i>
+								<h6>Ünvan</h6>
+								<p>Bakı şəhəri yasamal rayonu</p>
+							</li>
+							<li class="phone-icon">
+								<i class="fas fa-phone-alt"></i>
+								<h6>Telefon</h6>
+								<p>0121221212</p>
+							</li>
+							<li class="mobile-icon">
+								<i class="fas fa-mobile-alt"></i>
+								<h6>Mobile</h6>
+								<p>+9941111111</p>
+							</li>
+							<li class="email-icon">
+								<i class="fas fa-envelope"></i>
+								<h6>Email</h6>
+								<p>sabah.edu.az</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<section>
+
+		
+		{% endblock %}
