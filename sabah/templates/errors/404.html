@@ -14,6 +14,7 @@
         <link href="{{ url_for('static', filename='css/icons.css') }}" rel="stylesheet" type="text/css" />
         <link href="{{ url_for('static', filename='css/metisMenu.min.css') }}" rel="stylesheet" type="text/css" />
         <link href="{{ url_for('static', filename='css/style_admin.css') }}" rel="stylesheet" type="text/css" />
+        <link rel="shorcut icon" href="{{ url_for('static', filename='img/download.png') }}">
 
     </head>
 
@@ -27,12 +28,12 @@
                         <div class="card-body">
                             <div class="px-3">
                                 <div class="auth-logo-box">
-                                   <a href="{{url_for('home')}}"><img src="{{ url_for('static', filename='img/ustunlukler.jpg') }}" height="55" alt="logo" class="auth-logo"></a>
+                                   <a href="{{url_for('main.home')}}"><img src="{{ url_for('static', filename='img/ustunlukler.jpg') }}" height="55" alt="logo" class="auth-logo"></a>
                                 </div><!--end auth-logo-box-->
                                 <img src="{{ url_for('static', filename='img/404.jpg') }}" alt="" class="d-block mx-auto mt-4" height="250">
                                 <div class="text-center auth-logo-text mb-4">
                                     <h4 class="mt-0 mb-3 mt-5">Səhifə tapılmadı...</h4>
-                                    <a href="{{ url_for('home') }}" class="btn btn-sm btn-primary">Ana Səhifəyə Qayıt</a> 
+                                    <a href="{{ url_for('main.home') }}" class="btn btn-sm btn-primary">Ana Səhifəyə Qayıt</a> 
                                 </div> <!--end auth-logo-text-->
                             </div><!--end /div-->                                
                         </div><!--end card-body-->                            
