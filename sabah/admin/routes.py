@@ -1,4 +1,5 @@
 from flask import Blueprint, render_template, url_for
+from sabah.models import Slider
 
 
 
@@ -7,7 +8,8 @@ admin = Blueprint('admin', __name__)
 
 @admin.route('/admin')
 def admin_home():
-    return render_template('admin/admin-home.html')
+    slider = Slider.query.all()
+    return render_template('admin/admin-home.html', slider=slider)
 
 
 
