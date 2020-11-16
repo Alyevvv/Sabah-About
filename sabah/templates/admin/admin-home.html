@@ -123,9 +123,9 @@
                                 <h6 class="menu-title">Blog</h6>        
                             </div>
                             <ul class="nav">
-                                <li class="nav-item"><a class="nav-link" href="{{ url_for('admin.admin_announcement') }}"><i class="dripicons-blog"></i>Tədbirlər</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{ url_for('admin.admin_announcement') }}"><i class="dripicons-blog"></i>Elanlar</a></li>
                                 <li class="nav-item"><a class="nav-link" href="{{ url_for('admin.admin_news') }}"><i class="dripicons-clipboard"></i>Xəbərlər</a></li>
-                                <li class="nav-item"><a class="nav-link" href="{{ url_for('admin.admin_event') }}"><i class="dripicons-article"></i>Elanlar</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{ url_for('admin.admin_event') }}"><i class="dripicons-article"></i>Tədbirlər</a></li>
 
                             </ul>
                         </div><!-- end Blog -->
@@ -157,9 +157,11 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-body">
+                                    <a href="{{url_for("admin.slider_create")}}"><button type="button" class="btn btn-primary waves-effect waves-light float-right mb-3" data-toggle="modal" data-animation="bounce" data-target=".bs-example-modal-lg">+ Şəkil əlavə et</button></a>
     
                                     <h4 class="mt-0 header-title">Slider Table</h4>
-                                    <p class="text-muted mb-3">Slider'a əlavə olunan şəkillər aşağıda göstərilir.Cədvəlin sonunda göstərilən işarələr vasitəsi ilə dəyişikliklər edə bilərsiniz.
+                                    <p class="text-muted mb-3">Slider'a əlavə olunan şəkillər aşağıda göstərilir.<br>Cədvəlin sonunda göstərilən işarələr vasitəsi ilə şəkildə dəyişikliklər edə bilərsiniz.
+                                        <i class="fas fa-edit text-info font-16"></i> bu işarə şəkili dəyişməyi, <i class="fas fa-trash-alt text-danger font-16"></i> bu isə şəkili silməyi bildirir.
                                     </p>
 
                                     <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
