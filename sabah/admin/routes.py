@@ -5,11 +5,19 @@ from sabah.models import Slider
 
 admin = Blueprint('admin', __name__)
 
+# Slide routes
 
 @admin.route('/admin')
 def admin_home():
     slider = Slider.query.all()
     return render_template('admin/admin-home.html', slider=slider)
+
+
+
+@admin.route('/admin/slider/create')
+def slider_create():
+    return render_template('admin/slider-create.html')
+
 
 
 
