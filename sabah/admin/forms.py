@@ -5,6 +5,5 @@ from wtforms.validators import DataRequired
 
 
 
-class Slider(FlaskForm)
-picture = FileField('Slider Picture', validators=[FileAllowed(['jpg', 'png'])])
-submit = SubmitField('Create')
+class SliderForm(FlaskForm):
+    picture = FileField(validators=[FileAllowed(['jpg', 'png'])])

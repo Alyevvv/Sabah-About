@@ -9,13 +9,15 @@
 
         <!-- App favicon -->
         <link rel="shortcut icon" href="{{ url_for('static', filename='img/download.png') }}">
+        
+        <link href="{{ url_for('static', filename='plugins/dropify/css/dropify.min.css') }}" rel="stylesheet">
 
         <!-- App css -->
         <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
         <link href="{{ url_for('static', filename='css/icons.css') }}" rel="stylesheet" type="text/css" />
         <link href="{{ url_for('static', filename='css/metisMenu.min.css') }}" rel="stylesheet" type="text/css" />
         <link href="{{ url_for('static', filename='css/style_admin.css') }}" rel="stylesheet" type="text/css" />
-
+        
     </head>
 
     <body>
@@ -147,7 +149,7 @@
                                         <li class="breadcrumb-item"><a href="javascript:void(0);">SABAH</a></li>
                                         <li class="breadcrumb-item"><a href="javascript:void(0);">Ana səhifə</a></li>
                                         <li class="breadcrumb-item active">Slider</li>
-                                        <li class="breadcrumb-item active">Yarat</li>
+                                        <li class="breadcrumb-item active">Slider əlavə et</li>
                                     </ol>
                                 </div>
                                 <h4 class="page-title">Slider</h4>
@@ -155,33 +157,17 @@
                         </div><!--end col-->
                     </div>
 
-                    <!-- Flash Message -->
-                    <main role="main" class="container">
-                        <div class="row">
-                          <div class="col-md-8">
-                            {% with messages = get_flashed_messages(with_categories=true) %}
-                              {% if messages %}
-                                {% for category, message in messages %}
-                                  <div class="alert alert-{{ category }}">
-                                    {{ message }}
-                                  </div>
-                                {% endfor %}
-                              {% endif %}
-                            {% endwith %}
-                            {% block content %}{% endblock %}
-                          </div>
-                        </div>
-                      </main>
-
-
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-body">
-                                  
-                                    <h1>My image selector</h1>
-                            
-    
+                                    <h4 class="mt-0 header-title">Şəkil əlavə et</h4>
+                                    <form method="POST" enctype="multipart/form-data" action="{{ url_for('admin.admin_home') }}">
+                                        {{ form.csrf_toke }}
+                                        <p class="text-muted mb-3">Buradan yeni slider üçün şəkil əlavə edə bilərsiniz.</p>
+                                         {{ form.picture(class="dropify") }}
+                                        <button type="submit" style="margin-top: 15px; float: right;" class="btn btn-primary">Yukle</button>
+                                    </form>
                                 </div>
                             </div>
                         </div> <!-- end col -->
@@ -205,6 +191,9 @@
         <script src="{{ url_for('static', filename='js/metisMenu.min.js') }}"></script>
         <script src="{{ url_for('static', filename='js/waves.min.js') }}"></script>
         <script src="{{ url_for('static', filename='js/jquery.slimscroll.min.js') }}"></script>
+
+        <script src="{{ url_for('static', filename='plugins/dropify/js/dropify.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='pages/jquery.form-upload.init.js') }}"></script>
 
         <!-- App js -->
         <script src="{{ url_for('static', filename='js/app.js') }}"></script>
