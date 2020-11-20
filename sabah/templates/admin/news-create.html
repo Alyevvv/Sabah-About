@@ -1,0 +1,97 @@
+{% extends '/admin/admin-layout.html' %}
+
+{% block link %}<link href="{{ url_for('static', filename='plugins/dropify/css/dropify.min.css') }}" rel="stylesheet">{% endblock %}
+
+{% block body %}
+
+
+
+<!-- Page Content-->
+<div class="page-content">
+
+    <div class="container-fluid">
+        <!-- Page-Title -->
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="page-title-box">
+                    <div class="float-right">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="javascript:void(0);">SABAH</a></li>
+                            <li class="breadcrumb-item"><a href="javascript:void(0);">Blog</a></li>
+                            <li class="breadcrumb-item active"><a href="{{url_for('admin.admin_news')}}">Xəbərlər</a></li>
+                            <li class="breadcrumb-item active">Xəbər əlavə et</li>
+                        </ol>
+                    </div>
+                    <h4 class="page-title">Create</h4>
+                </div>
+                <!--end page-title-box-->
+            </div>
+            <!--end col-->
+        </div>
+        <!-- end page title end breadcrumb -->
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="mt-0 header-title">{{ legend }}</h4>
+                        <form method="POST" enctype="multipart/form-data" action="">
+                            {{ form.hidden_tag() }}
+                            <p class="text-muted mb-3">Buradan yeni xəbər əlavə edə bilərsiniz</p>
+                            <div class="form-group">
+                                {{ form.title.label(class="form-control-label") }}
+                                {% if form.title.errors %}
+                                  {{ form.title(class="form-control form-control-lg is-invalid") }}
+                                  <div class="invalid-feedback">
+                                    {% for error in form.title.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                  </div>
+                                {% else %}
+                                {{ form.title(class="form-control form-control-lg") }}
+                                {% endif %}
+                            </div>
+
+                            <div class="form-group">
+                                {{ form.image.label(class="form-control-label") }}
+                                {% if form.image.errors %}
+                                <div class="invalid-feedback">
+                                    {% for error in form.image.errors %}
+                                    <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                                {% else %}
+                                {{ form.image(class="dropify") }}
+                                {% endif %}
+                            </div>
+
+                            <div class="form-group">
+                                {{ form.text.label(class="form-control-label") }}
+                                {% if form.text.errors %}
+                                    {{ form.text(class="form-control form-control-lg is-invalid") }}
+                                    <div class="invalid-feedback">
+                                      {% for error in form.text.errors %}
+                                        <span>{{ error }}</span>
+                                      {% endfor %}
+                                   </div>
+                                 {% else %}
+                                    {{ form.text(class="form-control form-control-lg") }}
+                                {% endif %}
+                            </div>
+
+                            <button type="submit" style="margin-top: 15px; float: right;"
+                                class="btn btn-primary">{{ button }}</button>
+                        </form>
+                    </div>
+                </div>
+            </div> <!-- end col -->
+        </div> <!-- end row -->
+        <!-- end page title end breadcrumb -->
+
+
+        {% endblock %}
+
+        {% block script %}
+        <script src="{{ url_for('static', filename='plugins/dropify/js/dropify.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='pages/jquery.form-upload.init.js') }}"></script>
+        {% endblock %}
