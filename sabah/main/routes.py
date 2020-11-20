@@ -1,4 +1,7 @@
 from flask import Blueprint, render_template, url_for
+from sabah import db
+from sabah.models import *
+
 
 
 
@@ -8,7 +11,8 @@ main = Blueprint('main', __name__)
 @main.route('/')
 @main.route('/home')
 def home():
-    return render_template('home.html')
+    slider = Slider.query.all()
+    return render_template('home.html', slider=slider)
 
 
 
@@ -55,9 +59,10 @@ def sabah_volunteer():
     return render_template('Sabah-volunteer.html')
 
 
-@main.route('/news')
+@main.route('/xeberler')
 def news():
-    return render_template('news.html')
+    news = Blog.query.all()
+    return render_template('news.html', news=news)
 
 
 @main.route('/announcement')

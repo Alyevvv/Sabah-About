@@ -17,11 +17,10 @@ class User(db.Model):
 class Blog(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(250), nullable=False)
-    image = db.Column(db.String(255), nullable=False)
+    image = db.Column(db.String(255), nullable=True)
     text = db.Column(db.Text, nullable=False)
     add_date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
     type = db.Column(db.Integer, default=1)
-      
     def  __repr__(self):
         return f"Blog('{self.title}', '{self.add_date}')"
 
