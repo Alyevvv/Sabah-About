@@ -220,7 +220,7 @@
 /*Navbar*/
 .navbar {
     background-color: #1A477D !important;
-    border-bottom: #8FB714 1px solid;
+    border-bottom: #1A477D 1px solid;
 }
 
 .nav-link {
@@ -243,13 +243,42 @@
     }
 }
 
+
+@media (min-width: 360px) {
+    .animate {
+        animation-duration: 0.3s;
+        -webkit-animation-duration: 0.3s;
+        animation-fill-mode: both;
+        -webkit-animation-fill-mode: both;
+    }
+}
+
+
+
+@keyframes slideIn {
+    0% {
+        -webkit-transform: transform;
+        -webkit-opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        -webkit-opacity: 1;
+    }
+
+    0% {
+        -webkit-transform: translateY(1rem);
+        -webkit-opacity: 0;
+    }
+}
+
 .slideIn {
     -webkit-animation-name: slideIn;
     animation-name: slideIn;
 }
 
 .dropdown-menu {
-    margin-top: 17px !important;
+    margin-top: 16px !important;
     background-color: #90B914;
 }
 
@@ -341,7 +370,12 @@
     background-color: #8FB714;
     padding-top: 40px;
 }
+.contact-icons div{
+    display:inline-block;
+    margin-right: 10px;
+    color: blue;
 
+}
 #footer {
     background-color: #1A477D;
 }

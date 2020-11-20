@@ -221,7 +221,7 @@
 /* Navbar */
 .navbar {
     background-color: #1A477D !important;
-    border-bottom: #8FB714 1px solid;
+    border-bottom: #1A477D 1px solid;
 }
 
 .nav-link {
@@ -280,7 +280,7 @@
 
 /* Dropdown menu */
 .dropdown-menu {
-    margin-top: 17px !important;
+    margin-top: 16px !important;
     background-color: #90B914;
 }
 
@@ -385,6 +385,12 @@
 .infos {
     background-color: #8FB714;
     padding-top: 40px;
+}
+.contact-icons div{
+    display:inline-block;
+    margin-right: 10px;
+    color: blue;
+
 }
 
 /*FOOTER SECTION*/
