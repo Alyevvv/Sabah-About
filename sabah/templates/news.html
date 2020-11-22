@@ -27,12 +27,20 @@
 						<section id="news-info">
 							<div class="container">
 								<div class="row">
-									{% for elm in news %}
+									{% for elm in news.items %}
 									<div class="col-lg-4 col-md-6 col-sm-12 cards">
+										<style>
+										@media(max-width:375px){
+											.cards{
+												padding-left:8px;
+											}
+									}
+										</style>
 										<div class="card">
 											<a href="/xeber/{{elm.id}}"><img class="card-img-top" src="{{ url_for('static', filename='pics/' + elm.image) }}" alt="Card image cap"></a>
 											<div class="card-body">
 												<h5 class="card-title text-center" style="height: 53px; overflow: hidden;">{{ elm.title }}</h5>
+												<p class="text-muted mb-3">{{ elm.add_date.strftime('%Y-%m-%d') }}</p>
 												<p class="card-text">{{ elm.text }}</p>
 													<a href="/xeber/{{elm.id}}"><button type="button" class="btn btn-primary">
 														ardı
@@ -41,6 +49,20 @@
 										</div>
 									</div>
 									{% endfor %}
+									<!-- Pagination -->
+									<div class="container">
+										{% for page_num in news.iter_pages(left_edge=1, right_edge=3, left_current=1, right_current=2) %}
+										{% if page_num %}
+										    {% if news.page == page_num %}
+												<a class="btn  mb-4" style="background-color: #1a477d;" href="{{ url_for('main.news', page=page_num) }}">{{ page_num }}</a>
+											{% else %}
+												<a class="btn btn-outline-info mb-4"  href="{{ url_for('main.news', page=page_num) }}">{{ page_num }}</a>
+											{% endif %}
+										{% else %}
+											...
+										{% endif %}
+									{% endfor %}
+									</div>
 								</div>
 						</section>
 

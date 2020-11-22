@@ -2,7 +2,6 @@
 
 {% block body %}
 
-
 <!-- Page Content-->
 <div class="page-content">
 
@@ -20,11 +19,83 @@
                     </div>
                     <h4 class="page-title">Tədbirlər</h4>
                 </div>
-                <!--end page-title-box-->
+                <!-- end page-title-box -->
             </div>
             <!--end col-->
         </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <a href="{{ url_for('admin.event_create') }}"><button type="button"
+                                class="btn btn-primary waves-effect waves-light float-right mb-3" data-toggle="modal"
+                                data-animation="bounce" data-target=".bs-example-modal-lg">+
+                                Tədbir əlavə et</button></a>
+
+                        <h4 class="mt-0 header-title">Tədbirlərin Məlumat Bazası</h4>
+                        <p class="text-muted mb-3">Bütün tədbirlərin məlumatları aşağıda göstərilir.<hr>
+                            Cədvəlin sonunda göstərilən işarələr vasitəsi ilə xəbərdə dəyişikliklər edə bilərsiniz.<br><br>
+                            <code>Əməliyyatlar :</code> <i class="fas fa-edit text-info font-16"></i> -Tədbir yenilə <i
+                                    class="fas fa-trash-alt text-danger font-16" style="margin-left: 10px;"></i> -Tədbir sil
+                        </p>
+
+                        <!-- Flash Message -->
+                        <main role="main">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    {% with messages = get_flashed_messages(with_categories=true) %}
+                                    {% if messages %}
+                                    {% for category, message in messages %}
+                                    <div class="alert alert-{{ category }}">
+                                        {{ message }}
+                                    </div>
+                                    {% endfor %}
+                                    {% endif %}
+                                    {% endwith %}
+                                </div>
+                            </div>
+                        </main>
+
+                        <table id="datatable" class="table table-bordered dt-responsive nowrap"
+                            style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                            <thead>
+                                <tr>
+                                    <th>#Id</th>
+                                    <th>Başlıqlar</th>
+                                    <th>Şəkillər</th>
+                                    <th>Tarix</th>
+                                    <th>Məqalələr</th>
+                                    <th>Əməliyyatlar</th>
+                                </tr>
+                            </thead>
+                            {% for event in events %}
+                            <tbody>
+                                <tr>
+                                    <td> {{ event.id }} </td>
+                                    <td> {{ event.title }} </td>
+                                    <td> {{ event.image[:10] + '...' }} </td>
+                                    <td> {{ event.add_date }} </td>
+                                    <td> {{ event.text[:30] + '....'  }} </td>
+
+                                    <td>
+                                        <a href="{{ url_for('admin.event_update', event_id=event.id) }}" class="mr-2"><i class="fas fa-edit text-info font-16"></i></a>
+                                        <a href="{{ url_for('admin.event_delete', event_id=event.id) }}"><i class="fas fa-trash-alt text-danger font-16"></i></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            {%  endfor %}
+                        </table>
+
+                    </div>
+                </div>
+            </div> <!-- end col -->
+        </div> <!-- end row -->
         <!-- end page title end breadcrumb -->
+    </div>
+    <!--end page-title-box-->
+</div>
+<!--end col-->
+</div>
+<!-- end page title end breadcrumb -->
 
-
-        {% endblock %}
+{% endblock %}

@@ -2,7 +2,7 @@
 
 {% block link %}<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">{% endblock %}
 
-{% block title %}Haqqımızda{% endblock %}
+{% block title %}Tədbirlər{% endblock %}
 
 {% block body %}
 
@@ -27,89 +27,41 @@
 		<section id="news-info">
             <div class="container">
                 <div class="row">
+                    {% for event in events.items %}
                     <div class="col-lg-4 col-md-6 col-sm-12 cards">
+                        <style>
+                            @media(max-width:375px){
+                                .cards{
+                                    padding-left:8px;
+                                }
+                        }
+                            </style>
                         <div class="card">
-                            <a href="{{ url_for('blog.xeber') }}"><img class="card-img-top" src="{{ url_for('static', filename='img/news-example.jpg') }}" alt="Card image cap"></a>
+                            <a href="/tedbir/{{ event.id }}"><img class="card-img-top" src="{{ url_for('static', filename='pics/' + event.image) }}" alt="Card image cap"></a>
                             <div class="card-body">
-                                <h5 class="card-title text-center">Xeber 1</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up
-                                    the bulk of the card's content.</p>
-                                    <a href="{{ url_for('blog.xeber') }}"><button type="button" class="btn btn-primary">
+                                <h5 class="card-title text-center" style="height: 23px; overflow: hidden;">{{ event.title }}</h5>
+                                <p class="text-muted mb-3">{{ event.add_date.strftime('%Y-%m-%d') }}</p>
+                                <p class="card-text">{{ event.text }}</p>
+                                    <a href="/tedbir/{{ event.id }}"><button type="button" class="btn btn-primary">
                                         ardı
                                     </button></a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 cards">
-                        <div class="card" ">
-                                <a href="{{ url_for('blog.xeber') }}"><img class=" card-img-top" src="{{ url_for('static', filename='img/susan-yin-2JIvboGLeho-unsplash.jpg') }}"
-                                alt="Card image cap"></a>
-                            <div class="card-body">
-                                <h5 class="card-title text-center"> Xeber 2</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up
-                                    the bulk of the card's content.</p>
-                                    <a href="{{ url_for('blog.xeber') }}"><button type="button" class="btn btn-primary">
-                                        ardı
-                                    </button></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 col-sm-12 cards">
-                        <div class="card">
-                            <a href="{{ url_for('blog.xeber') }}"><img class="card-img-top" src="{{ url_for('static', filename='img/news-example.jpg') }}" alt="Card image cap"></a>
-                            <div class="card-body">
-                                <h5 class="card-title text-center">Xeber 3</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up
-                                    the bulk of the card's content.</p>
-                                    <a href="{{ url_for('blog.xeber') }}"><button type="button" class="btn btn-primary">
-                                        ardı
-                                    </button></a>
-                            </div>
-                        </div>
-					</div>
-					<div class="col-lg-4 col-md-6 col-sm-12 cards">
-                        <div class="card">
-                            <a href="{{ url_for('blog.xeber') }}"><img class="card-img-top" src="{{ url_for('static', filename='img/news-example.jpg') }}" alt="Card image cap"></a>
-                            <div class="card-body">
-                                <h5 class="card-title text-center">Xeber 4</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up
-                                    the bulk of the card's content.</p>
-                                    <a href="{{ url_for('blog.xeber') }}"><button type="button" class="btn btn-primary">
-                                        ardı
-                                    </button></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 cards">
-                        <div class="card" ">
-                                <a href="{{ url_for('blog.xeber') }}"><img class=" card-img-top" src="{{ url_for('static', filename='img/susan-yin-2JIvboGLeho-unsplash.jpg') }}"
-                                alt="Card image cap"></a>
-                            <div class="card-body">
-                                <h5 class="card-title text-center"> Xeber 5</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up
-                                    the bulk of the card's content.</p>
-                                    <a href="{{ url_for('blog.xeber') }}"><button type="button" class="btn btn-primary">
-                                        ardı
-                                    </button></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 col-sm-12 cards">
-                        <div class="card">
-                            <a href="{{ url_for('blog.xeber') }}"><img class="card-img-top" src="{{ url_for('static', filename='img/news-example.jpg') }}" alt="Card image cap"></a>
-                            <div class="card-body">
-                                <h5 class="card-title text-center">Xeber 6</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up
-                                    the bulk of the card's content.</p>
-                                    <a href="{{ url_for('blog.xeber') }}"><button type="button" class="btn btn-primary">
-                                        ardı
-                                    </button></a>
-							</div>
-							
-							
-                        </div>
+                    {% endfor %}
+                    <!-- Pagination -->
+                    <div class="container">
+                        {% for page_num in events.iter_pages(left_edge=1, right_edge=3, left_current=1, right_current=2) %}
+                        {% if page_num %}
+                            {% if events.page == page_num %}
+                                <a class="btn  mb-4" style="background-color: #1a477d;" href="{{ url_for('main.sabah_event', page=page_num) }}">{{ page_num }}</a>
+                            {% else %}
+                                <a class="btn btn-outline-info mb-4"  href="{{ url_for('main.sabah_event', page=page_num) }}">{{ page_num }}</a>
+                            {% endif %}
+                        {% else %}
+                            ...
+                        {% endif %}
+                    {% endfor %}
                     </div>
                 </div>
         </section>

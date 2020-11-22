@@ -74,7 +74,7 @@
                                     <td>{{ oneNews.id }}</td>
                                     <td>{{ oneNews.title }}</td>
                                     <td>{{ oneNews.image[:10] + '...' }}</td>
-                                    <td>{{ oneNews.add_date }}</td>
+                                    <td>{{ oneNews.add_date.strftime('%Y-%m-%d') }}</td>
                                     <td>{{ oneNews.text[:30] + '....' }}</td>
                                     <td>
                                         <a href="{{ url_for('admin.news_update', news_id=oneNews.id) }}" class="mr-2"><i class="fas fa-edit text-info font-16"></i></a>

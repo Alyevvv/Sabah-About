@@ -1,6 +1,7 @@
-from flask import Blueprint, render_template, url_for
+from flask import Blueprint, render_template, url_for, request
 from sabah import db
 from sabah.models import *
+import datetime
 
 
 
@@ -12,7 +13,8 @@ main = Blueprint('main', __name__)
 @main.route('/home')
 def home():
     slider = Slider.query.all()
-    return render_template('home.html', slider=slider)
+    news = Blog.query.filter_by(type=1).order_by(Blog.add_date.desc()).limit(3)
+    return render_template('home.html', slider=slider, news=news)
 
 
 
@@ -44,11 +46,6 @@ def teachers_recommend():
     return render_template('teachers-recommend.html')
 
 
-@main.route('/sabah-event')
-def sabah_event():
-    return render_template('sabah-event.html')
-
-
 @main.route('/sabah-achivements')
 def sabah_achivements():
     return render_template('Sabah-achivements.html')
@@ -61,13 +58,27 @@ def sabah_volunteer():
 
 @main.route('/xeberler')
 def news():
-    news = Blog.query.all()
+    page = request.args.get('page', 1, type=int) #slug
+    news = Blog.query.filter_by(type=1).order_by(Blog.add_date.desc()).paginate(page=page, per_page=6)
     return render_template('news.html', news=news)
+
+
+
+
+@main.route('/sabah-event')
+def sabah_event():
+    page = request.args.get('page', 1, type=int) #slug
+    events = Blog.query.filter_by(type=2).order_by(Blog.add_date.desc()).paginate(page=page, per_page=6)
+    return render_template('sabah-event.html', events=events)
+
 
 
 @main.route('/announcement')
 def announcement():
-    return render_template('announcement.html')
+    page= request.args.get('page', 1, type=int)
+    announcement=Blog.query.filter_by(type=3).order_by(Blog.id.desc()).paginate(page=page, per_page=5)
+    news = Blog.query.filter_by(type=1).order_by(Blog.add_date.desc()).limit(3)
+    return render_template('announcement.html', announcement=announcement, news=news)
 
 
 @main.route('/contact')

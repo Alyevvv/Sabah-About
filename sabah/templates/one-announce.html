@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block link %}
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+	integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/inner.css') }}">
+{% endblock %}
+
+{% block title %}Elan{% endblock %}
+
+{% block body %}
+		<!-- BLOG SECTION -->
+		<section id="about">
+			<div class="container">
+					<h6 class="project-title" style="font-size: 50px; font: 20px; font-weight: 700!important;color: #1A477D; margin-top: 0px">{{ oneAnnouncmenet.title }}</h6></br>
+						<p>{{ oneAnnouncmenet.text }}</p></br>
+
+            <div class="card border-success mb-3" style="max-width: 23rem; margin-top: 100x;">
+              <div class="card-header border-success" style="background-color:#8FB714 "></div>
+                <div class="card-body text-success">
+                  <h5 class="card-title" style= "color: #1A477D" >İştirak etməyə tələsin! Tarix:</h5>
+                  <p class="card-text" style="font-size: 25px; color: #1A477D;">{{ oneAnnouncmenet.add_date.strftime('%Y-%m-%d') }}</p>
+                </div>
+             <div class="card-footer  border-success" style="background-color:#8FB714 "></div>
+			  		</div>
+         </div>
+		</section>
+
+{% endblock %}

@@ -104,6 +104,15 @@ animation-delay:1.05s;
   -moz-animation-delay:1.05s;
 }
 
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
 #fountainG_5{
 left:117px;
 animation-delay:1.2s;
@@ -261,7 +270,6 @@ transform:scale(.3);
 }
 
 
-
 @keyframes slideIn {
   0% {
       -webkit-transform: transform;
@@ -339,6 +347,7 @@ transform:scale(.3);
 .announcements .slick-slider ul li:last-child {
   border-bottom: none;
   margin-bottom:65px;
+  font-size:2vw;
 }
 .announcements .slick-slider ul li h3:hover a {
   color: #7d3793;
@@ -368,19 +377,7 @@ transform:scale(.3);
   right: 0;
   background-color: #fff;
 }
-.announcements .left-right-arrows button:first-child {
-  margin-right: 3px;
-}
-.left-right-arrows {
-  position: absolute;
-  bottom: 0px;
-  right: 10px;
-}
-.left-right-arrows button {
-  height: 38px;
-  width: 38px;
-  border: 1px solid #464646;
-}
+
 .events-section {
   position: relative;
   margin: 0 auto;
@@ -514,14 +511,6 @@ a {
 }
 
 
-
-
-
-
-
-
-
-
 @media (max-width: 991px) {
   .announcements {
     margin: 0 auto;
@@ -546,6 +535,7 @@ a {
 
 @media (max-width: 991px) {
   .announcements h2 {
+    width: 100%;
     border-bottom: none;
   }
 }
@@ -555,21 +545,11 @@ a {
     padding-left: 15px;
     margin-top: 20px;
   }
-}
-
-@media (max-width: 767px) {
-  .left-right-arrows {
-    border-top: -21px;
+  .container {
+    padding-left: 15px;
+    margin-top: 20px;
   }
 }
-
-@media (min-width: 360px) and (max-width: 767px) {
-  .left-right-arrows button {
-    height: 50px;
-    width: 50px;
-  }
-}
-
 
 @media (max-width: 991px) {
   .events-section {
@@ -581,6 +561,17 @@ a {
   .events-section {
     width: 80%;
   }
+}
+
+@media (max-width: 767.98px){
+.blog-entry .b {
+    margin: 0 auto;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-bottom: 20px;
+ }
 }
 
 @media (max-width: 500px) {
@@ -626,5 +617,16 @@ a {
 @media (min-width: 991px) {
   .events-section .left-right-arrows {
     bottom: 0px;
+  }
+}
+
+@media (max-width: 767.98px){
+.blog-entry .img {
+    margin: 0 auto;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-bottom: 20px;
   }
 }

@@ -1332,7 +1332,6 @@ small {
 .waves-circle {
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
-  -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
 }
 
 .waves-button,
@@ -1388,7 +1387,6 @@ small {
 }
 
 .waves-float {
-  -webkit-mask-image: none;
   -webkit-box-shadow: 0px 1px 1.5px 1px rgba(0, 0, 0, 0.12);
   box-shadow: 0px 1px 1.5px 1px rgba(0, 0, 0, 0.12);
   -webkit-transition: all 300ms;
@@ -3269,10 +3267,6 @@ dt {
   font-weight: 600;
 }
 
-.ribbon-1 {
-  /* ribbon */
-  /*==Ribbon-icon==*/
-}
 
 .ribbon-1 .ribbon-box {
   position: relative;
@@ -6818,7 +6812,6 @@ dt {
   letter-spacing: 2px;
   cursor: pointer;
   line-height: 35px;
-  -webkit-transition: all 0.6s;
   border-radius: 3px;
 }
 

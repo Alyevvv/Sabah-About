@@ -593,6 +593,13 @@
     background-color: #8FB714;
     padding-top: 40px;
 }
+.contact-icons div{
+    display:inline-block;
+    margin-right: 10px;
+    color: blue;
+
+}
+
 
 /*FOOTER SECTION*/
 #footer {
@@ -791,4 +798,3 @@
     }
 
 }
-

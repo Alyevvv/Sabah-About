@@ -14,11 +14,17 @@ def xeber(news_id):
           return render_template('inner.html', oneNews=oneNews)
 
 
-@blog.route('/tedbir')
-def tedbir():
-    return render_template('inner.html')
+@blog.route('/tedbir/<int:event_id>')
+def tedbir(event_id):
+    events = Blog.query.filter_by(type=2)
+    for oneNews in events:
+        if oneNews.id == event_id:
+          return render_template('inner.html', oneNews=oneNews)
 
 
-@blog.route('/elan')
-def elan():
-    return render_template('inner.html')
+@blog.route('/elan/<int:ann_id>')
+def elan(ann_id):
+    announcement = Blog.query.filter_by(type=3)
+    for oneAnnouncmenet in announcement:
+        if oneAnnouncmenet.id == ann_id:
+            return render_template('one-announce.html', oneAnnouncmenet=oneAnnouncmenet)

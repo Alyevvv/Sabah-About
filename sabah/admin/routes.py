@@ -32,7 +32,7 @@ def slider_create():
         f.save(os.path.join(
             app.root_path, 'static', 'pics', filename 
         ))
-        temp = Slider()
+        temp = Slider( url = form.url.data)
         temp.image = filename
         flash("Slider uğurla yükləndi", 'success')
         db.session.add(temp)
@@ -48,15 +48,21 @@ def slider_update(slider_id):
     slider = Slider.query.get_or_404(slider_id)
     form = SliderForm()
     if form.validate_on_submit():
-        
-        slider.image = form.picture.data
+        f = form.image.data
+        filename = str(randrange(1*10*100, 9*10**100)) + "." + secure_filename(f.filename).rsplit('.', 1)[1].lower() # generate random filename
+        f.save(os.path.join(
+            app.root_path, 'static', 'pics', filename 
+        ))
+
+        slider.image = filename
+        slider.url = form.url.data
         db.session.commit()
         flash('Şəkil uğurla yeniləndi', 'success')
         return redirect(url_for('admin.admin_home'))
     elif request.method == 'GET':
-        form.picture.data = slider.image
-
-    return render_template('admin/slider-create.html', form=form)
+        current_pic = url_for('static', filename='pics/' + slider.image)
+        form.url.data = slider.url
+    return render_template('admin/slider-create.html', form=form, label='Slider yenilə', pic=current_pic)
 
 
 
@@ -73,6 +79,7 @@ def slider_delete(slider_id):
 
 
 
+# Calendar
 @admin.route('/admin-calendar')
 def admin_calendar():
     return render_template('admin/calendar.html')
@@ -82,7 +89,7 @@ def admin_calendar():
 
 @admin.route('/admin/news', methods=['GET', 'POST'])
 def admin_news():
-    news = Blog.query.all()
+    news = Blog.query.filter_by(type=1).order_by(Blog.add_date.desc())
     return render_template('admin/admin-news.html', news=news)
 
 
@@ -123,9 +130,9 @@ def news_update(news_id):
         return redirect(url_for('admin.admin_news', news_id=news.id))
     elif request.method == 'GET':
         form.title.data = news.title
-        form.image.data = news.image
+        current_pic = url_for('static', filename='pics/' + news.image)
         form.text.data = news.text
-    return render_template('admin/news-create.html', legend='Xəbər yenilə', button='Yenilə', form=form)
+    return render_template('admin/news-create.html', legend='Xəbər yenilə', button='Yenilə', form=form, pic=current_pic)
 
         
 
@@ -145,12 +152,134 @@ def news_delete(news_id):
 
 
 
-
-@admin.route('/admin-event')
+#Event Routes
+@admin.route('/admin-event', methods=['GET', 'POST'])
 def admin_event():
-    return render_template('admin/admin-event.html')
+    events = Blog.query.filter_by(type=2).order_by(Blog.add_date.desc())
+    return render_template('admin/admin-event.html', events=events)
 
 
-@admin.route('/admin-announcement')
+
+@admin.route('/admin/event/create', methods=['GET', 'POST'])
+def event_create():
+    form = EventForm()
+    if form.validate_on_submit():
+         f = form.image.data
+         filename = str(randrange(1*10*100, 9*10**100)) + "." + secure_filename(f.filename).rsplit('.', 1)[1].lower() # generate random filename
+         f.save(os.path.join(
+            app.root_path, 'static', 'pics', filename 
+         ))
+         events = Blog(title=form.title.data, text=form.text.data, type=2)
+         events.image = filename
+         flash("Tədbir uğurla yükləndi", 'success')
+         db.session.add(events)
+         db.session.commit()
+         return redirect(url_for('admin.admin_event'))
+    return render_template('admin/event-create.html', legend='Tədbir əlavə et', button='Yüklə', form=form)
+
+
+
+
+
+@admin.route('/admin/events/<int:event_id>/update', methods=['GET', 'POST'])
+def event_update(event_id):
+    events = Blog.query.get_or_404(event_id)
+    form = EventForm()
+    if form.validate_on_submit():
+        f = form.image.data
+        filename = str(randrange(1*10*100, 9*10**100)) + "." + secure_filename(f.filename).rsplit('.', 1)[1].lower() # generate random filename
+        f.save(os.path.join(
+            app.root_path, 'static', 'pics', filename 
+        ))
+        news.image = filename
+        events.title=form.title.data
+        events.text=form.text.data
+        db.session.commit()
+        flash('Tədbir uğurla yeniləndi', 'success')
+        return redirect(url_for('admin.admin_event', event_id=event.id))
+    elif request.method == 'GET':
+        form.title.data = events.title
+        current_pic = url_for('static', filename='pics/' + events.image)
+        form.text.data = events.text
+    return render_template('admin/event-create.html', legend='Tədbir yenilə', button='Yenilə', form=form, pic=current_pic)
+
+
+
+
+@admin.route('/admin/events/<int:event_id>/delete', methods=['GET', 'POST'])
+def event_delete(event_id):
+    events = Blog.query.get_or_404(event_id)
+    db.session.delete(events)
+    db.session.commit()
+    flash('Tədbir uğurla silindi', 'success')
+    return redirect(url_for('admin.admin_event'))
+
+
+
+
+
+
+
+# Announcement
+
+@admin.route('/admin-announcement', methods=['GET', 'POST'])
 def admin_announcement():
-    return render_template('admin/admin-announcement.html')
+     announcement = Blog.query.filter_by(type=3).order_by(Blog.id.desc())
+     return render_template('admin/admin-announcement.html', announcement=announcement)
+
+
+
+@admin.route('/admin/announcement/create', methods=['GET', 'POST'])
+def announcement_create():
+    form = AnnouncementForm()
+    if form.validate_on_submit():
+        f = form.image.data
+        filename = str(randrange(1*10*100, 9*10**100)) + "." + secure_filename(f.filename).rsplit('.', 1)[1].lower() # generate random filename
+        f.save(os.path.join(
+            app.root_path, 'static', 'pics', filename 
+        ))
+        announcement = Blog(title=form.title.data, text=form.text.data, add_date=form.date.data, type=3)
+        announcement.image = filename
+        flash("Elan uğurla yükləndi", 'success')
+        db.session.add(announcement)
+        db.session.commit()
+        return redirect(url_for('admin.admin_announcement'))
+    return render_template('admin/announcement-create.html', legend='Elan əlavə et', button='Yüklə', form=form)
+
+
+
+
+
+@admin.route('/admin/announcement/<int:ann_id>/update', methods=['GET', 'POST'])
+def announcement_update(ann_id):
+    announcement = Blog.query.get_or_404(ann_id)
+    form = AnnouncementForm()
+    if form.validate_on_submit():
+        f = form.image.data
+        filename = str(randrange(1*10*100, 9*10**100)) + "." + secure_filename(f.filename).rsplit('.', 1)[1].lower() # generate random filename
+        f.save(os.path.join(
+            app.root_path, 'static', 'pics', filename 
+        ))
+        announcement.image = filename
+        announcement.title=form.title.data
+        announcement.text=form.text.data
+        announcement.add_date = form.date.data
+        db.session.commit()
+        flash('Elan uğurla yeniləndi', 'success')
+        return redirect(url_for('admin.admin_announcement', ann_id=ann_id))
+    elif request.method == 'GET':
+        form.title.data = announcement.title
+        current_pic = url_for('static', filename='pics/' + announcement.image)
+        form.text.data = announcement.text
+        form.date.data = announcement.add_date
+    return render_template('admin/announcement-create.html', legend='Elan yenilə', button='Yenilə', form=form, pic=current_pic)
+
+
+
+@admin.route('/admin/announcement/<int:ann_id>/delete', methods=['GET', 'POST'])
+def announcement_delete(ann_id):
+    announcement = Blog.query.get_or_404(ann_id)
+    db.session.delete(announcement)
+    db.session.commit()
+    flash('Elan uğurla silindi', 'success')
+    return redirect(url_for('admin.admin_announcement'))

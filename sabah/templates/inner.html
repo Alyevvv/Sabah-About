@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
-{% block link %}<link rel="stylesheet" href="{{ url_for('static', filename='css/inner.css') }}">{% endblock %}
+{% block link %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/inner.css') }}">{% endblock %}
 
 {% block title %}Blog{% endblock %}
 
@@ -8,22 +9,19 @@
 
 
 
-		<!-- BLOG SECTION -->
-		<section id="about">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-6 col-md-12 col-sm-12 about-col">
-						<div class="overlay-container">
-							<img src="{{ url_for('static', filename='pics/' + oneNews.image) }}" class="image img-fluid">
-						</div>
-					</div>
-					<div class="col-lg-6 col-md-12 col-sm-12 about-text">
-						<h4>{{ oneNews.title}}</h4>
-						<h4>date</h4>
-						<p>{{ oneNews.text }}</p>
-					</div>
-				</div>
-			</div>
-		</section>
+<!-- BLOG SECTION -->
+<section id="about">
+	<div class="container">
+		<h6 class="project-title"
+			style="font-size: 50px; font: 20px; font-weight: 700!important;color: #1A477D; margin-top: 120px">
+			{{ oneNews.title }}</h6></br>
+		<img src="{{ url_for('static', filename='pics/' + oneNews.image) }}" align="left" class="image img"
+			style="max-width: 400px; padding-right: 30px; padding-top: 20px;  margin-bottom: 10px;">
+		{{ oneNews.text }}<br CLEAR=”left” />
+	</div>
+	</div>
+	</div>
+	</div>
+</section>
 
 {% endblock %}
