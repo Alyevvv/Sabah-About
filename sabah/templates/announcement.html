@@ -37,7 +37,7 @@
 						<div class="col-md-12">
 							<div class="blog-entry ftco-animate d-md-flex fadeInUp ftco-animated">
 								<img src="{{ url_for('static', filename='pics/' + ann.image) }}" class="img5"
-									style="height:150px; width: 150px; border-radius: 50%; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; margin: 30px; margin-left: 0px">
+									style="height:150px; width: 150px; border-radius: 50%; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; margin: 30px; margin-left: 0px; object-fit: cover;">
 								<div class="text text-2 pl-md-4">
 									<h3 class="mb-2"><a href="/elan/{{ann.id}}">{{ ann.title }}</a></h3>
 									<div class="meta-wrap">
@@ -48,7 +48,7 @@
 										</p>
 									</div>	
 									<p class="mb-4" style="height: 70px; overflow: hidden;">{{ ann.text }}</p>
-									<p><a href="/elan/{{ann.id}}" class="btn-custom">Read More <span
+									<p><a href="/elan/{{ann.id}}" class="btn-custom">Ətraflı <span
 												class="ion-ios-arrow-forward"></span></a></p>
 									</br>
 									<hr />
@@ -86,7 +86,7 @@
 				<div class="col-xl-4 sidebar ftco-animate bg-light pt-5 fadeInUp ftco-animated">
 					<div class="sidebar-box pt-md-4">
 						<div class="sidebar-box ftco-animate fadeInUp ftco-animated">
-							<h3 class="sidebar-heading">Popular Articles</h3>
+							<h3 class="sidebar-heading">Yeni xəbərlərimiz</h3>
 							{% for latestNews in news %}
 							<div class="block-21 mb-4 d-flex">
 								<a class="blog-img mr-4" style="background-image: url(images/image_1.jpg)"></a>
@@ -102,15 +102,24 @@
 
 						<div class="sidebar-box subs-wrap img py-4" ">
 					  	<div class=" overlay"></div>
-						<h3 class="mb-4 sidebar-heading">Newsletter</h3>
-						<p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia</p>
+						<h3 class="mb-4 sidebar-heading">SABAH nədir?</h3>
+						<p class="mb-4">Ali təhsildə təhsilin keyfiyyətinin yüksəldilməsi, müasir tələblərə uyğun kadr hazırlığının təmin edilməsi və ali təhsil sistemində yeni mühitin yaradılması məqsədilə Təhsil Nazirliyinin tabeliyindəki ali təhsil müəssələrində Savadlı, Bacarıqlı və Hazırlıqlı (SABAH) tələbələrdən ibarət qruplar zənciridir.Layihənin əsas məqsədi ali təhsil sahəsində davamlı, uzunmüddətli, hərtərəfli və əhatəli keyfiyyət dəyişikliklərinin həyata keçirilməsi üçün zəruri mühitin yaradılması, Azərbaycan gənclərinin fərdi və peşəkar inkişafına dəstək olmaq, dünyanın aparıcı universitetləri ilə əməkdaşlıq layihələri, elmi-tədqiqat, təcrübə və tələbə mübadilələrinin genişləndirilmsi və əmək bazarının tələblərinə uyğun olaraq savadlı, bacarıqlı və hazırlıqlı mütəxəssislərin yetişdirilməsidir.</p>
 					</div>
 
 					<div class="sidebar-box ftco-animate">
-						<h3 class="sidebar-heading">Paragraph</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque, autem
-							necessitatibus voluptate quod mollitia delectus aut.</p>
+						<h3 class="sidebar-heading">SABAH qruplarına kimlər müraciət edə bilər?</h3>
+						<p>SABAH qruplarına Azərbaycan Respublikası Təhsil Nazirliyinin tabeliyində olan ali təhsil müəssisələrində müəyyən edilmiş ixtisaslar üzrə əyani formada təhsil alan,  I tədris ilinin I semestrinin nəticələrinə görə akademik borcu olmayan və orta müvəffəqiyyət göstəricisi (ÜOMG) 61-dən aşağı olmayan Azərbaycan vətəndaşları müraciət edə bilər.</p>
 					</div>
+
+					<div class="sidebar-box ftco-animate">
+						<h3 class="sidebar-heading">SABAH qruplarına tələbə qəbulu necə aparılır?</h3><br/>
+						<p>“SABAH qruplarına tələbə qəbulu Qaydaları”na əsasən, tələbələrin qəbulu tədris ilində bir dəfə olmaqla, Azərbaycan Respublikası Təhsil Nazirliyinin  tabeliyində olan ali təhsil müəssisələrində müvafiq ixtisaslar üzrə təhsil alan, ümumi orta müvəfəqiyyət göstəricisi 61 baldan aşağı olmayan, I tədris ilinin I və II semestri üzrə akademik borcu olmayan tələbələr arasından 3 mərhələli müsabiqə yolu ilə aparılır.<br/>
+						
+						Qeydiyyatdan keçmək üçün <a href = "http://sabah.edu.az/az/qeydiyyat ">buradan</a> istifadə edə bilərsiniz! <br/>
+						Bizim SABAH`ımız siz olun!
+						</p>
+					</div>
+
 				</div><!-- END COL -->
 			</div>
 		</div>

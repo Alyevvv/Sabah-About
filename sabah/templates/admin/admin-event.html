@@ -35,6 +35,7 @@
                         <h4 class="mt-0 header-title">Tədbirlərin Məlumat Bazası</h4>
                         <p class="text-muted mb-3">Bütün tədbirlərin məlumatları aşağıda göstərilir.<hr>
                             Cədvəlin sonunda göstərilən işarələr vasitəsi ilə xəbərdə dəyişikliklər edə bilərsiniz.<br><br>
+                            <strong>Qeyd:</strong> Yüklənilən şəkilin ölçüsü müəyyən standartlara uyğun olmalıdır. Şəkilin uzunluğu eni ilə təxmini eyni ölçüdə olmalıdır. <br> Nümunə ölçülər: <code>5729x3556, 1920x1281, 5616x3744</code><br><br>
                             <code>Əməliyyatlar :</code> <i class="fas fa-edit text-info font-16"></i> -Tədbir yenilə <i
                                     class="fas fa-trash-alt text-danger font-16" style="margin-left: 10px;"></i> -Tədbir sil
                         </p>
@@ -79,9 +80,31 @@
 
                                     <td>
                                         <a href="{{ url_for('admin.event_update', event_id=event.id) }}" class="mr-2"><i class="fas fa-edit text-info font-16"></i></a>
-                                        <a href="{{ url_for('admin.event_delete', event_id=event.id) }}"><i class="fas fa-trash-alt text-danger font-16"></i></a>
+                                        <a data-toggle="modal" data-target="#exampleModal"><i class="fas fa-trash-alt text-danger font-16"></i></a>
                                     </td>
                                 </tr>
+                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                      <div class="modal-content">
+                                        <div class="modal-header">
+                                          <h5 class="modal-title" id="exampleModalLabel">Məlumatı silmək istəyirsiniz?</h5>
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                          </button>
+                                        </div>
+                                        <div class="modal-body">
+                                          <p style="color: red;">Diqqət!</p> Silinən məlumat geri qaytarılmır
+                                        </div>
+                                        <div class="modal-footer">
+                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Qayıt</button>
+                                          <form action="{{ url_for('admin.event_delete', event_id=event.id) }}" method="POST">
+                                            <input class="btn btn-danger" type="submit" value="Sil">
+                                          </form>
+                                          
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
                             </tbody>
                             {%  endfor %}
                         </table>
@@ -99,3 +122,4 @@
 <!-- end page title end breadcrumb -->
 
 {% endblock %}
+

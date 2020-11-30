@@ -54,9 +54,6 @@
 
                             <div class="form-group">
                                 {{ form.image.label(class="form-control-label") }}
-                                {% if pic %}
-                                <p>aktiv şəkil: <img src="{{ pic }}" style="width: 300px; display: flex;"></p>
-                                {% endif %}
                                 {% if form.image.errors %}
                                 <div class="invalid-feedback">
                                     {% for error in form.image.errors %}
@@ -64,7 +61,11 @@
                                     {% endfor %}
                                 </div>
                                 {% else %}
+                                {% if events %}
+                                {{ form.image(class="dropify", data_default_file=url_for('static' , filename="pics/" + events.image)) }}
+                                {% else %}
                                 {{ form.image(class="dropify")}}
+                                {% endif %}
                                 {% endif %}
                             </div>
 

@@ -18,7 +18,7 @@
     </ol>
     <div class="carousel-inner">
         {% for slide in slider %}
-        <div class="carousel-item active">
+        <div class="{% if loop.index == 1 %} carousel-item active {% else %} carousel-item {%endif%} ">
                 <a href="{{ slide.url }}"><img class="d-block w-100" height="600"
                     src="{{ url_for('static', filename='pics/' + slide.image) }}" alt="slide"></a>
         </div>
@@ -48,8 +48,7 @@
                         <h4>MÜƏLLİMLƏRİMİZ</h4>
                     </div>
                     <div class="product-text">
-                        <p>Proin iaculis puruss consequat sem cure digni ssim.Donec porttitora entum
-                            suscipit aenean rhoncus posuere odio in tincidunt</p>
+                        <p>Bakı Dövlət Universitetinin SABAH qruplarında əsas və seçmə fənləri tədris edən müəllimlər imtahan nəticələrinə əsasən seçilir və fənlər innovativ üsullarla keçirilir.</p>
                         <a href="{{ url_for('main.teachers_table') }}"><button type="button" class="btn btn-primary">
                                 Ətraflı
                             </button></a>
@@ -65,8 +64,7 @@
                         <h4>UĞURLARIMIZ</h4>
                     </div>
                     <div class="product-text">
-                        <p>Proin iaculis puruss consequat sem cure digni ssim.Donec porttitora entum
-                            suscipit aenean rhoncus posuere odio in tincidunt</p>
+                        <p>Bakı Dövlət Universitetinin SABAH qruplarında təhsil alan tələbələr təcrübə, xaricdə təhsil və mübadilə proqramlarında iştirak edərək, uğurlu gələcəyə addımlayırlar.</p>
                         <a href="{{ url_for('main.sabah_achivements') }}"><button type="button" class="btn btn-primary">
                                 Ətraflı
                             </button></a>
@@ -81,8 +79,7 @@
                         <h4>İXTİSASLAR</h4>
                     </div>
                     <div class="product-text">
-                        <p>Proin iaculis puruss consequat sem cure digni ssim.Donec porttitora entum
-                            suscipit aenean rhoncus posuere odio in tincidunt</p>
+                        <p>Bakı Dövlət Universitetində SABAH qrupları yaradılan ixtisaslarla tanış olmaq üçün 1 saylı korpus, 3-cü mərtəbədə yerləşən SABAH mərkəzinə yaxınlaşa bilərsiniz.</p>
                         <a href="{{ url_for('main.specialities') }}"><button type="button" class="btn btn-primary">
                                 Ətraflı
                             </button></a>
@@ -97,8 +94,7 @@
                         <h4>HAQQIMIZDA</h4>
                     </div>
                     <div class="product-text">
-                        <p> Proin iaculis puruss consequat sem cure digni ssim.Donec porttitora entum
-                            suscipit aenean rhoncus posuere odio in tincidunt</p>
+                        <p>Ali təhsil sahəsində əhatəli keyfiyyət dəyişikliklərinin həyata keçirilməsi üçün zəruri mühitin yaradılması, Azərbaycan gənclərinin fərdi inkişafına dəstək olmaqdır.</p>
                         <a href="{{ url_for('main.about') }}"><button type="button" class="btn btn-primary">
                                 Ətraflı
                             </button></a>
@@ -211,26 +207,22 @@
                 <div class=" icons col-md-3 col-sm-6  wow fadeInLeft" data-wow-duration="2s">
                     <img src="{{ url_for('static', filename='img/icon2.png') }}" alt="">
                     <h4>FƏNLƏR</h4>
-                    <p>Proin iaculis puruss consequat sem cure digni ssim.Donec porttitora entum suscipit
-                        aenean rhoncus posuere odio in tincidunt</p>
+                    <p>SABAH qruplarında tədris edilən fənlər zamanın tələblərinə uyğun, innovativ texnologiyaya əsaslanaraq keçirlir.</p>
                 </div>
                 <div class=" icons col-md-3 col-sm-6  wow fadeInUp" data-wow-duration="2s">
                     <img src="{{ url_for('static', filename='img/icon3.png') }}" alt="">
                     <h4>MƏZUNLAR</h4>
-                    <p>Proin iaculis puruss consequat sem cure digni ssim.Donec porttitora entum suscipit
-                        aenean rhoncus posuere odio in tincidunt</p>
+                    <p>Bakı Dövlət Universitetində SABAH qruplarından müvəffəqiyyətlə məzun olan tələbələrimizin sayı ildən-ilə artır.</p>
                 </div>
                 <div class="icons col-md-3 col-sm-6  wow fadeInRight" data-wow-duration="2s">
                     <img src="{{ url_for('static', filename='img/icon4.png') }}" alt="">
                     <h4>TƏDBİRLƏR</h4>
-                    <p>Proin iaculis puruss consequat sem cure digni ssim.Donec porttitora entum suscipit
-                        aenean rhoncus posuere odio in tincidunt</p>
+                    <p>SABAH qruplarında tələbələr və müəllimlər heyəti tərəfindən mütəmadi olaraq tədbirlər, yığıncaqlar həyata keçirilir.</p>
                 </div>
                 <div class="icons col-md-3 col-sm-6  wow fadeInRight" data-wow-duration="2s">
                     <img src="{{ url_for('static', filename='img/icon1.png') }}" alt="">
                     <h4>TÖVSİYƏLƏR</h4>
-                    <p>Proin iaculis puruss consequat sem cure digni ssim.Donec porttitora entum suscipit
-                        aenean rhoncus posuere odio in tincidunt</p>
+                    <p>Uğurlu iş və təhsil həyatına yiyələnmək üçün müəllim və tələbələrimizin tövsiyələri ilə tanış ola bilərsiniz.</p>
                 </div>
             </div>
         </div>

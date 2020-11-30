@@ -62,16 +62,13 @@
                                     {% endfor %}
                                   </div>
                                 {% else %}
-                                {{ form.date(class="form-control form-control-lg", placeholder="2020-09-09") }}
+                                {{ form.date(class="form-control form-control-lg", placeholder="nümunə: 2020-09-09") }}
                                 {% endif %}
                             </div>
 
 
                             <div class="form-group">
                                 {{ form.image.label(class="form-control-label") }}
-                                {% if pic %}
-                                <p>aktiv şəkil: <img src="{{ pic }}" style="width: 300px; display: flex;"></p>
-                                {% endif %}
                                 {% if form.image.errors %}
                                 <div class="invalid-feedback">
                                     {% for error in form.image.errors %}
@@ -79,7 +76,11 @@
                                     {% endfor %}
                                 </div>
                                 {% else %}
-                                {{ form.image(class="dropify",)}}
+                                {% if announcement %}
+                                {{ form.image(class="dropify", data_default_file=url_for('static' , filename="pics/" + announcement.image)) }}
+                                {% else %}
+                                {{ form.image(class="dropify")}}
+                                {% endif %}
                                 {% endif %}
                             </div>
 

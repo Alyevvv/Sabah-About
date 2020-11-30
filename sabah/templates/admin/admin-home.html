@@ -34,8 +34,10 @@
 
                                 <h4 class="mt-0 header-title">Slider Məlumat Bazası</h4>
                                 <p class="text-muted mb-3">Slider'a əlavə olunan şəkillər aşağıda
-                                    göstərilir.<hr>Cədvəlin sonunda göstərilən işarələr vasitəsi ilə şəkildə
+                                    göstərilir.
+                                    <hr>Cədvəlin sonunda göstərilən işarələr vasitəsi ilə şəkildə
                                     dəyişikliklər edə bilərsiniz.<br><br>
+                                    <strong>Qeyd:</strong> Yüklənilən şəkilin ölçüsü müəyyən standartlara uyğun olmalıdır. Şəkilin uzunluğu enindən təxminən <strong>2</strong> dəfə uzun olmalıdır. <br> Nümunə ölçülər: <code> 1440x400, 4992x2056, 6016x4016</code><br><br>
                                     <code>Əməliyyatlar :</code> <i class="fas fa-edit text-info font-16"></i>- Slider yenilə <i
                                     class="fas fa-trash-alt text-danger font-16" style="margin-left: 10px;"></i> -Slider sil
                                 </p>
@@ -76,9 +78,33 @@
                                             <td>{{ img.image[:15] + '...' }}</td>
                                             <td>
                                                 <a href="{{ url_for('admin.slider_update', slider_id=img.id) }}" class="mr-2"><i class="fas fa-edit text-info font-16"></i></a>
-                                                <a href="{{ url_for('admin.slider_delete', slider_id=img.id) }}"><i class="fas fa-trash-alt text-danger font-16"></i></a>
+                                                <a data-toggle="modal" data-target="#exampleModal" ><i class="fas fa-trash-alt text-danger font-16"></i></a>
                                             </td>
                                         </tr>
+
+                                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                              <div class="modal-content">
+                                                <div class="modal-header">
+                                                  <h5 class="modal-title" id="exampleModalLabel">Məlumatı silmək istəyirsiniz?</h5>
+                                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                  </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                  <p style="color: red;">Diqqət!</p> Silinən məlumat geri qaytarılmır
+                                                </div>
+                                                <div class="modal-footer">
+                                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Qayıt</button>
+                                                  <form action="{{ url_for('admin.slider_delete', slider_id=img.id) }}" method="POST">
+                                                    <input class="btn btn-danger" type="submit" value="Sil">
+                                                  </form>
+                                                  
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+
                                     </tbody>
                                     {% endfor %}
                                 </table>
@@ -90,6 +116,8 @@
                 <!-- end page title end breadcrumb -->
 
 {% endblock %}
+
+
 
 
          

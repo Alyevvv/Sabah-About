@@ -165,15 +165,14 @@
             <div class="col-md-2" style="display:flex; justify-content: center;">
                 <div class="contact-title">
                     <div class="universty-name">
-                        <p>SABAH</p>
+                        <p>SABAH fərqi</p>
                     </div>
                     <div class="contact-items text-muted">
                         <ul class="contact-item text-muted">
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">International College</a></li>
-                            <li><a href="#">Registration</a></li>
-                            <li><a href="#">History</a></li>
-                            <li><a href="#">OKS</a></li>
+                            <li><a style="text-decoration: none;" href="{{ url_for('main.about') }}">Haqqımızda</a></li>
+                            <li><a style="text-decoration: none;" href="{{ url_for('main.specialities') }}">İxtisasların üstünlükləri</a></li>
+                            <li><a style="text-decoration: none;" href="{{ url_for('main.news') }}">Xəbərlər</a></li>
+                            <li><a style="text-decoration: none;" href="{{ url_for('main.announcement') }}">Elanlar</a></li>
                         </ul>
                     </div>
                 </div>
@@ -181,15 +180,14 @@
             <div class="col-md-2" style="display:flex; justify-content: center;">
                 <div class="contact-title">
                     <div class="universty-name">
-                        <p>SABAH</p>
+                        <p>SABAH tələbələri</p>
                     </div>
                     <div class="contact-items">
                         <ul class="contact-item">
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">International College</a></li>
-                            <li><a href="#">Registration</a></li>
-                            <li><a href="#">History</a></li>
-                            <li><a href="#">OKS</a></li>
+                            <li><a style="text-decoration: none;" href="{{ url_for('main.sabah_event') }}">Tədbirlər</a></li>
+                            <li><a style="text-decoration: none;" href="{{ url_for('main.sabah_achivements') }}">Uğurlar</a></li>
+                            <li><a style="text-decoration: none;" href="{{ url_for('main.sabah_volunteer') }}">Könüllülük</a></li>
+                            <li><a style="text-decoration: none;" href="{{ url_for('main.groups') }}">Qruplar və fənnlər</a></li>
                         </ul>
                     </div>
                 </div>
@@ -197,7 +195,7 @@
             <div class="col-md-4 infos text-center">
                 <div class="contact-info">
                     <div class="contact-number">
-                        <i class="fas fa-phone-square-alt"></i>
+                        <i class="fas fa-phone" style = "color: #212529"></i>
                         <h5>Əlaqə nömrəmiz</h5>
                         <p>000-000-00-00</p>
                     </div>
@@ -205,16 +203,16 @@
                     <div class="socials">
                         <ul class="social">
                             <li>
-                                <i class="fas fa-phone-square-alt"></i>
+                                <i class="fas fa-at" style="color: #212529"></i>
                                 <p>info@medicpress.com</p>
                             </li>
                             <li>
-                                <i class="fas fa-phone-square-alt"></i>
-                                <p>sabah.edu.az</p>
+                                <a href = "http://sabah.edu.az"><i class="fas fa-window-maximize" style = "color: #212529"></i>
+                                    <p style = "color: #212529">sabah.edu.az</p></a>
                             </li>
                             <li>
-                                <i class="fas fa-phone-square-alt"></i>
-                                <p>Elmler m. Bakı Dövlət Universiteti</p>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <p>Akademik Zahid Xəlilov küçəsi - 23</p>
                             </li>
                         </ul>
                     </div>

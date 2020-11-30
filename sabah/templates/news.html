@@ -39,8 +39,8 @@
 										<div class="card">
 											<a href="/xeber/{{elm.id}}"><img class="card-img-top" src="{{ url_for('static', filename='pics/' + elm.image) }}" alt="Card image cap"></a>
 											<div class="card-body">
-												<h5 class="card-title text-center" style="height: 53px; overflow: hidden;">{{ elm.title }}</h5>
-												<p class="text-muted mb-3">{{ elm.add_date.strftime('%Y-%m-%d') }}</p>
+												<h5 class="card-title text-center" style="height: 28px; overflow: hidden;">{{ elm.title }}</h5>
+												<p class="text-muted mb-3" style="height: 17px;">{{ elm.add_date.strftime('%Y-%m-%d') }}</p>
 												<p class="card-text">{{ elm.text }}</p>
 													<a href="/xeber/{{elm.id}}"><button type="button" class="btn btn-primary">
 														ardı
