@@ -31,6 +31,8 @@ def admin_home():
     return render_template('admin/admin-home.html', slider=slider)
 
 
+
+
 @admin.route('/admin/slider/create', methods=['GET', 'POST'])
 def slider_create():
     form = SliderForm()
@@ -79,6 +81,12 @@ def slider_delete(slider_id):
     db.session.commit()
     flash('Slider uğurla silindi', 'success')
     return redirect(url_for('admin.admin_home'))
+
+
+
+
+
+
 
 
 # News Routes
@@ -143,6 +151,14 @@ def news_delete(news_id):
     return redirect(url_for('admin.admin_news'))
 
 
+
+
+
+
+
+
+
+
 # Event Routes
 @admin.route('/admin-event', methods=['GET', 'POST'])
 def admin_event():
@@ -202,6 +218,13 @@ def event_delete(event_id):
     db.session.commit()
     flash('Tədbir uğurla silindi', 'success')
     return redirect(url_for('admin.admin_event'))
+
+
+
+
+
+
+
 
 
 # Announcement
